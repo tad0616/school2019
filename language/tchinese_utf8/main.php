@@ -63,5 +63,5 @@ define("TF_CONTENT_DISPLAY_TYPE", "內容區域顯示模式");
 define("TF_CONTENT_DISPLAY_TYPE_DESC", "以何種方式來呈現內容區");
 define("TF_CONTENT_SHADOW", "內容區域是否要套用陰影");
 define("TF_CONTENT_SHADOW_DESC", "若「是」會在內容區域周圍加上陰影");
-define("TF_USE_CONTAINER_WIDTH", "主要內容顯示區域的寬度");
+define("TF_USE_CONTAINER_WIDTH", "整體頁面顯示寬度");
 define("TF_USE_CONTAINER_WIDTH_DESC", "12即滿版，12以下左右會自動留空");
