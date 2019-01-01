@@ -60,6 +60,11 @@
             </div>
         <{/if}>
 
+        <!-- 導覽列區域 -->
+        <{if $navbar_pos=='sticky-top'}>
+            <{includeq file="$xoops_rootpath/themes/school2019/tpl/nav-container.tpl"}>
+        <{/if}>
+
         <!-- 滑動圖區域 -->
         <{if $slide_width > 0 }>
             <div class="container-fluid" id="slide-container">
@@ -78,26 +83,8 @@
         <{/if}>
 
         <!-- 導覽列區域 -->
-        <{if $navbar_pos!="not-use"}>
-            <{if $navbar_pos=='fixed-top' or $navbar_pos=='fixed-bottom'}>
-                <div id="nav-container-display" style="width:100%;">
-                    <{includeq file="$xoops_rootpath/modules/tadtools/themes4_tpl/navbar.tpl"}>
-                </div>
-            <{else}>
-                <div class="container-fluid" id="nav-container">
-                    <div class="row <{if $nav_shadow=='1' and $nav_display_type!='not_full'}>xoops_content_shadow<{/if}>">
-                        <div class="col-sm"></div>
-                        <div class="col-sm-<{if $nav_display_type=='all_full'}>12<{else}><{$container_width}><{/if}>">
-                            <div id="xoops_theme_nav" class="row <{if $nav_shadow=='1' and $nav_display_type=='not_full'}>xoops_content_shadow<{/if}>">
-                                <div id="nav-container-display" style="width:100%;">
-                                    <{includeq file="$xoops_rootpath/modules/tadtools/themes4_tpl/navbar.tpl"}>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm"></div>
-                    </div>
-                </div>
-            <{/if}>
+        <{if $navbar_pos=='default'}>
+            <{includeq file="$xoops_rootpath/themes/school2019/tpl/nav-container.tpl"}>
         <{/if}>
 
         <!-- 主內容區域 -->
@@ -139,6 +126,12 @@
                 <div class="col-sm"></div>
             </div>
         </div>
+        <{/if}>
+
+        <{if $navbar_pos=='fixed-top' or $navbar_pos=='fixed-bottom'}>
+            <div id="nav-container-display" style="width:100%;">
+                <{includeq file="$xoops_rootpath/modules/tadtools/themes4_tpl/navbar.tpl"}>
+            </div>
         <{/if}>
 
         <!-- 載入bootstrap -->

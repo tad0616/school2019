@@ -55,9 +55,9 @@ define("TF_FOOTER_HEIGHT_DESC", "沒內容時可設定頁尾最低呈現高度")
 define("TF_FOOTER_PADDING", "頁尾文字內距");
 define("TF_FOOTER_PADDING_DESC", "分別為：上 右 下 左");
 
-define("TF_DISPLAY_TYPE_NOT_FULL", "內容、底色均顯示於中間區域，左右留空");
-define("TF_DISPLAY_TYPE_BG_FULL", "內容顯示於中間區域、底色滿版");
-define("TF_DISPLAY_TYPE_ALL_FULL", "內容、底色均滿版");
+define("TF_DISPLAY_TYPE_NOT_FULL", "內容底色皆置中");
+define("TF_DISPLAY_TYPE_BG_FULL", "內容置中，底色滿版");
+define("TF_DISPLAY_TYPE_ALL_FULL", "內容底色皆滿版");
 
 define("TF_CONTENT_DISPLAY_TYPE", "內容區域顯示模式");
 define("TF_CONTENT_DISPLAY_TYPE_DESC", "以何種方式來呈現內容區");
