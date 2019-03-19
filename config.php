@@ -96,7 +96,6 @@ $config_enable['bg_attachment'] = array('enable' => '1', 'min' => '', 'max' => '
 //背景位置[theme_css.tpl]，值： left top （預設，左上）, right top （右上）, left bottom （左下）, right bottom （右下）, center center （中中）, center top （中上）, center bottom （中下）
 $config_enable['bg_position'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => '');
 
-
 /*
 tabs-3 滑動圖片
  */
@@ -111,7 +110,6 @@ $config_enable['slide_height'] = array('enable' => '1', 'min' => '', 'max' => ''
 
 //是否可上傳滑動圖片[slideshow_responsive.tpl]
 $config_enable['use_slide'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => '1');
-
 
 /*
 tabs-4 logo圖
@@ -139,7 +137,6 @@ $config_enable['logo_left'] = array('enable' => '1', 'min' => '', 'max' => '', '
 
 //Logo置中[logo.tpl]，值：1,0
 $config_enable['logo_center'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => '0');
-
 
 /*
 tabs-5 區塊標題列
@@ -194,11 +191,11 @@ $config_enable['bt_xx']['centerBottomRightBlock']：下中右區塊設定
 $config_enable['bt_bg_color']['leftBlock'] = array('enable'=>1, 'min' => '', 'max' => '', 'require'=>0 , 'default' => '#7CBBBB');
 $config_enable['bt_bg_color']['rightBlock'] = array('enable'=>1, 'min' => '', 'max' => '', 'require'=>0 , 'default' => '#D2C38E');
  */
-$config_enable['bt_bg_color']['leftBlock'] = array('enable'=>1, 'min' => '', 'max' => '', 'require'=>0 , 'default' => '#BDBDBD');
-$config_enable['block_style']['leftBlock'] = array('enable'=>1, 'min' => '', 'max' => '', 'require'=>0 , 'default' => 'background:white; padding: 0px; margin-bottom:20px;border:1px solid #BDBDBD;');
-$config_enable['block_title_style']['leftBlock'] = array('enable'=>1, 'min' => '', 'max' => '', 'require'=>0 , 'default' => 'border: none; text-align: center;padding: 4px;');
-$config_enable['bt_bg_color']['rightBlock'] = array('enable'=>1, 'min' => '', 'max' => '', 'require'=>0 , 'default' => '#BDBDBD');
-$config_enable['block_style']['rightBlock'] = array('enable'=>1, 'min' => '', 'max' => '', 'require'=>0 , 'default' => 'background:white; padding: 0px; margin-bottom:20px;border:1px solid #BDBDBD;');
+$config_enable['bt_bg_color']['leftBlock']       = array('enable' => 1, 'min' => '', 'max' => '', 'require' => 0, 'default' => '#BDBDBD');
+$config_enable['block_style']['leftBlock']       = array('enable' => 1, 'min' => '', 'max' => '', 'require' => 0, 'default' => 'background:white; padding: 0px; margin-bottom:20px;border:1px solid #BDBDBD;');
+$config_enable['block_title_style']['leftBlock'] = array('enable' => 1, 'min' => '', 'max' => '', 'require' => 0, 'default' => 'border: none; text-align: center;padding: 4px;');
+$config_enable['bt_bg_color']['rightBlock']      = array('enable' => 1, 'min' => '', 'max' => '', 'require' => 0, 'default' => '#BDBDBD');
+$config_enable['block_style']['rightBlock']      = array('enable' => 1, 'min' => '', 'max' => '', 'require' => 0, 'default' => 'background:white; padding: 0px; margin-bottom:20px;border:1px solid #BDBDBD;');
 
 /*
 tabs-6 導覽工具列
@@ -230,6 +227,11 @@ $config_enable['navbar_color_hover'] = array('enable' => '1', 'min' => '', 'max'
 //導覽工具列 圖示顏色[navbar.tpl]，值： icon-white （白色圖案）, '' （黑色圖案）
 $config_enable['navbar_icon'] = array('enable' => '0', 'min' => '', 'max' => '', 'require' => '0', 'default' => 'style=');
 
+//導覽工具列 導覽選項上下距離[theme_css_navbar.tpl]
+$config_enable['navbar_py'] = array('enable' => '1', 'min' => '2', 'max' => '30', 'require' => '1', 'default' => '10');
+
+//導覽工具列 導覽選項左右距離[theme_css_navbar.tpl]
+$config_enable['navbar_px'] = array('enable' => '1', 'min' => '2', 'max' => '30', 'require' => '1', 'default' => '15');
+
 // 上傳導覽列logo圖[navbar.tpl]，值：可指定置於「themes/佈景/images/navlogo/」下的某一檔案名稱
 $config_enable['navlogo_img'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => '');
-  
