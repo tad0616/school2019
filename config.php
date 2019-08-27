@@ -203,7 +203,7 @@ tabs-6 導覽工具列
 
 $config_tabs[6] = 1;
 
-//導覽工具列位置[navbar.tpl]，值： navbar-fixed-top （固定上方）, navbar-fixed-bottom （固定下方）, navbar-static-top （滑動圖片上方）, navbar-static-bottom （滑動圖片下方）, default （佈景預設值）, not-use （不使用）
+//導覽工具列位置[navbar.tpl]，值： fixed-top （固定上方）, fixed-bottom （固定下方）, sticky-top（滑動圖片上方）, default （滑動圖片下方）, not-use （不使用）
 $config_enable['navbar_pos'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => 'sticky-top');
 
 //導覽工具列 漸層顏色(top)[theme_css_navbar.tpl]

@@ -26,3 +26,29 @@ $theme_config[$i]['text']    = TF_LOGO_BGCOLOR;
 $theme_config[$i]['desc']    = TF_LOGO_BGCOLOR_DESC;
 $theme_config[$i]['type']    = "color";
 $theme_config[$i]['default'] = "#689F38";
+
+//logo 底圖
+$i++;
+$theme_config[$i]['name']    = "logo_bg";
+$theme_config[$i]['text']    = TF_LOGO_BG;
+$theme_config[$i]['desc']    = TF_LOGO_BG_DESC;
+$theme_config[$i]['type']    = "file";
+$theme_config[$i]['default'] = "";
+
+//logo 底圖重複方式
+$i++;
+$theme_config[$i]['name']    = "logo_bg_repeat";
+$theme_config[$i]['text']    = TF_LOGO_BG_REPEAT;
+$theme_config[$i]['desc']    = TF_LOGO_BG_REPEAT_DESC;
+$theme_config[$i]['type']    = "select";
+$theme_config[$i]['options'] = array('repeat' => _MA_TADTHEMES_BG_REPEAT_NORMAL, 'repeat-x' => _MA_TADTHEMES_BG_REPEAT_X, 'repeat-y' => _MA_TADTHEMES_BG_REPEAT_Y, 'no-repeat' => _MA_TADTHEMES_BG_NO_REPEAT, 'no-repeat; background-size: cover' => _MA_TADTHEMES_BG_NO_REPEAT_COVER, 'no-repeat; background-size: contain' => _MA_TADTHEMES_BG_NO_REPEAT_CONTAIN);
+$theme_config[$i]['default'] = "repeat";
+
+//logo 底圖重複方式
+$i++;
+$theme_config[$i]['name']    = "logo_bg_position";
+$theme_config[$i]['text']    = TF_LOGO_POSITION;
+$theme_config[$i]['desc']    = TF_LOGO_POSITION_DESC;
+$theme_config[$i]['type']    = "select";
+$theme_config[$i]['options'] = array('left top' => _MA_TADTHEMES_BG_POSITION_LT, 'repeat-right top' => _MA_TADTHEMES_BG_POSITION_RT, 'left bottom' => _MA_TADTHEMES_BG_POSITION_LB, 'right bottom' => _MA_TADTHEMES_BG_POSITION_RB, 'center center' => _MA_TADTHEMES_BG_POSITION_CC, 'center top' => _MA_TADTHEMES_BG_POSITION_CT, 'center bottom' => _MA_TADTHEMES_BG_POSITION_CB);
+$theme_config[$i]['default'] = "left top";

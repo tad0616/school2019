@@ -40,6 +40,28 @@
             #xoops_theme_footer a:visited {
                 color:<{$footer_color}>;
             }
+
+            <{if $logo_bg}>
+            #logo-container{
+                <{if $logo_display_type!='not_full'}>
+                background-image: url('<{$logo_bg}>');
+                background-position: <{$logo_bg_position}>;
+                background-repeat: <{$logo_bg_repeat}>;
+                <{else}>
+                background-image: none;
+                <{/if}>
+            }
+
+            #logo-container-display{
+                <{if $logo_display_type=='not_full'}>
+                background-image: url('<{$logo_bg}>');
+                background-position: <{$logo_bg_position}>;
+                background-repeat: <{$logo_bg_repeat}>;
+                <{else}>
+                background-image: none;
+                <{/if}>
+            }
+            <{/if}>
         </style>
     </head>
 
@@ -48,7 +70,7 @@
         <!-- logo區域 -->
         <{if $logo_img and $logo_position=="page"}>
             <div class="container-fluid" id="logo-container">
-                <div class="row" <{if $logo_shadow=='1' and $logo_display_type!='not_full'}>xoops_content_shadow<{/if}>">
+                <div class="row <{if $logo_shadow=='1' and $logo_display_type!='not_full'}>xoops_content_shadow<{/if}>">
                     <div class="col-sm"></div>
                     <div class="col-sm-<{if $logo_display_type=='all_full'}>12<{else}><{$container_width}><{/if}>">
                         <div id="logo-container-display" class="row <{if $logo_shadow=='1' and $logo_display_type=='not_full'}>xoops_content_shadow<{/if}>">
