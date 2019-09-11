@@ -72,3 +72,12 @@ define('TF_CONTENT_SHADOW', 'Do you want to apply shadows in the content area');
 define('TF_CONTENT_SHADOW_DESC', 'If "Yes" will add a shadow around the content area');
 define('TF_USE_CONTAINER_WIDTH', 'Overall page display width');
 define('TF_USE_CONTAINER_WIDTH_DESC', '12 is full version, will be left blank after 12 or so');
+
+Define('TF_LOGO_AUTO', 'Do you want to use automatic pairing');
+Define('TF_LOGO_AUTO_DESC', '');
+Define('TF_LOGO_PATH', 'Illustration placement path');
+Define('TF_LOGO_PATH_DESC', '');
+Define('TF_LOGO_VAR', 'Automatically pair variable name');
+Define('TF_LOGO_VAR_DESC', '');
+Define('TF_LOGO_EXT', 'Figure extension name');
+Define('TF_LOGO_EXT_DESC', '');

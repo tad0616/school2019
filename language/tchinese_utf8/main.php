@@ -71,3 +71,12 @@ define('TF_CONTENT_SHADOW', '內容區域是否要套用陰影');
 define('TF_CONTENT_SHADOW_DESC', '若「是」會在內容區域周圍加上陰影');
 define('TF_USE_CONTAINER_WIDTH', '整體頁面顯示寬度');
 define('TF_USE_CONTAINER_WIDTH_DESC', '12即滿版，12以下左右會自動留空');
+
+define('TF_LOGO_AUTO', '是否使用自動配對');
+define('TF_LOGO_AUTO_DESC', '讓系統自動偵測網址某變數來自動切換 logo');
+define('TF_LOGO_PATH', '圖示放置路徑');
+define('TF_LOGO_PATH_DESC', '前後都要有 /，如：/uploads/logo/');
+define('TF_LOGO_VAR', '自動配對變數名稱');
+define('TF_LOGO_VAR_DESC', '欲偵測的網址變數名稱，如：nsn');
+define('TF_LOGO_EXT', 'logo圖的副檔名');
+define('TF_LOGO_EXT_DESC', '例如 jpg 或 png');
