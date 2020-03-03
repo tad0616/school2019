@@ -42,26 +42,104 @@
             }
 
             <{if $logo_bg}>
-            #logo-container{
-                <{if $logo_display_type!='not_full'}>
-                background-image: url('<{$logo_bg}>');
-                background-position: <{$logo_bg_position}>;
-                background-repeat: <{$logo_bg_repeat}>;
-                <{else}>
-                background-image: none;
+                #logo-container{
+                    <{if $logo_display_type!='not_full'}>
+                    background-image: url('<{$logo_bg}>') <{if $logo_bg2}>, url('<{$logo_bg2}>')<{/if}>;
+                    background-position: <{$logo_bg_position}><{if $logo_bg2_position}>, <{$logo_bg2_position}><{/if}>;
+                    background-repeat: <{$logo_bg_repeat}><{if $logo_bg2_repeat}>, <{$logo_bg2_repeat}><{/if}>;
+                    <{else}>
+                    background-image: none;
+                    <{/if}>
+                }
+
+                #logo-container-display{
+                    <{if $logo_display_type=='not_full'}>
+                    background-image: url('<{$logo_bg}>') <{if $logo_bg2}>, url('<{$logo_bg2}>')<{/if}>;
+                    background-position: <{$logo_bg_position}><{if $logo_bg2_position}>, <{$logo_bg2_position}><{/if}>;
+                    background-repeat: <{$logo_bg_repeat}><{if $logo_bg2_repeat}>, <{$logo_bg2_repeat}><{/if}>;
+                    <{else}>
+                    background-image: none;
+                    <{/if}>
+                }
+            <{/if}>
+
+            #nav-container{
+                <{if $nav_bg_opacity!=''}>
+                    <{if $nav_display_type=='not_full' and $navbar_pos!='fixed-top' and $navbar_pos!='fixed-bottom'}>
+                        background-color:transparent;
+                    <{else}>
+                        <{if $navbar_bg_top==$navbar_bg_bottom}>
+                            background: rgba(<{$navbar_bg_top_rgb.r}>,<{$navbar_bg_top_rgb.g}>,<{$navbar_bg_top_rgb.b}>, <{$nav_bg_opacity}>);
+                        <{else}>
+                            background: linear-gradient(rgba(<{$navbar_bg_top_rgb.r}>,<{$navbar_bg_top_rgb.g}>,<{$navbar_bg_top_rgb.b}>, <{$nav_bg_opacity}>), rgba(<{$navbar_bg_bottom_rgb.r}>,<{$navbar_bg_bottom_rgb.g}>,<{$navbar_bg_bottom_rgb.b}>, <{$nav_bg_opacity}>));
+                        <{/if}>
+                    <{/if}>
+                <{/if}>
+                <{if $nav_margin}>
+                    margin: <{$nav_margin}>;
                 <{/if}>
             }
 
-            #logo-container-display{
-                <{if $logo_display_type=='not_full'}>
-                background-image: url('<{$logo_bg}>');
-                background-position: <{$logo_bg_position}>;
-                background-repeat: <{$logo_bg_repeat}>;
-                <{else}>
-                background-image: none;
+            #nav-container-display{
+                <{if $nav_bg_opacity!=''}>
+                    <{if $nav_display_type=='not_full' and $navbar_pos!='fixed-top' and $navbar_pos!='fixed-bottom'}>
+                        <{if $navbar_bg_top==$navbar_bg_bottom}>
+                            background: rgba(<{$navbar_bg_top_rgb.r}>,<{$navbar_bg_top_rgb.g}>,<{$navbar_bg_top_rgb.b}>, <{$nav_bg_opacity}>);
+                        <{else}>
+                            background: linear-gradient(rgba(<{$navbar_bg_top_rgb.r}>,<{$navbar_bg_top_rgb.g}>,<{$navbar_bg_top_rgb.b}>, <{$nav_bg_opacity}>), rgba(<{$navbar_bg_bottom_rgb.r}>,<{$navbar_bg_bottom_rgb.g}>,<{$navbar_bg_bottom_rgb.b}>, <{$nav_bg_opacity}>));
+                        <{/if}>
+                    <{else}>
+                        background-color: transparent;
+                    <{/if}>
+                <{/if}>
+
+                <{if $nav_border_radius}>
+                    border-radius: <{$nav_border_radius}>;
                 <{/if}>
             }
-            <{/if}>
+
+            #main-nav {
+                <{if $nav_border_radius}>
+                    border-radius: <{$nav_border_radius}>;
+                    <{if $navbar_pos=='fixed-top' or $navbar_pos=='fixed-bottom'}>
+                        <{if $navbar_img}>
+                            opacity: <{$nav_bg_opacity}>;
+                        <{elseif $navbar_bg_top==$navbar_bg_bottom}>
+                            background-color: rgba(<{$navbar_bg_top_rgb.r}>,<{$navbar_bg_top_rgb.g}>,<{$navbar_bg_top_rgb.b}>, <{$nav_bg_opacity}>);
+                        <{else}>
+                            background: linear-gradient(rgba(<{$navbar_bg_top_rgb.r}>,<{$navbar_bg_top_rgb.g}>,<{$navbar_bg_top_rgb.b}>, <{$nav_bg_opacity}>), rgba(<{$navbar_bg_bottom_rgb.r}>,<{$navbar_bg_bottom_rgb.g}>,<{$navbar_bg_bottom_rgb.b}>, <{$nav_bg_opacity}>));
+                        <{/if}>
+                    <{else}>
+                        background: transparent;
+                    <{/if}>
+
+                <{elseif $nav_bg_opacity}>
+                    <{if $nav_display_type=='not_full' and $navbar_pos!='fixed-top' and $navbar_pos!='fixed-bottom'}>
+                        <{if $navbar_img}>
+                            opacity: <{$nav_bg_opacity}>;
+                        <{elseif $navbar_bg_top==$navbar_bg_bottom}>
+                            background-color: rgba(<{$navbar_bg_top_rgb.r}>,<{$navbar_bg_top_rgb.g}>,<{$navbar_bg_top_rgb.b}>, <{$nav_bg_opacity}>);
+                        <{else}>
+                            background: linear-gradient(rgba(<{$navbar_bg_top_rgb.r}>,<{$navbar_bg_top_rgb.g}>,<{$navbar_bg_top_rgb.b}>, <{$nav_bg_opacity}>), rgba(<{$navbar_bg_bottom_rgb.r}>,<{$navbar_bg_bottom_rgb.g}>,<{$navbar_bg_bottom_rgb.b}>, <{$nav_bg_opacity}>));
+                        <{/if}>
+                    <{/if}>
+                <{/if}>
+            }
+
+
+            #footer-container{
+                <{if $footer_display_type!='not_full'}>
+                    background-repeat: <{$footer_img_repeat}>;
+                    background-position: <{$footer_img_position}>;
+                <{/if}>
+            }
+
+            #footer-container-display{
+                <{if $footer_display_type=='not_full'}>
+                    background-repeat: <{$footer_img_repeat}>;
+                    background-position: <{$footer_img_position}>;
+                <{/if}>
+            }
         </style>
     </head>
 
