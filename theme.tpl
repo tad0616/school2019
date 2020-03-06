@@ -63,68 +63,125 @@
                 }
             <{/if}>
 
-            #nav-container{
-                <{if $nav_bg_opacity!=''}>
-                    <{if $nav_display_type=='not_full' and $navbar_pos!='fixed-top' and $navbar_pos!='fixed-bottom'}>
-                        background-color:transparent;
-                    <{else}>
-                        <{if $navbar_bg_top==$navbar_bg_bottom}>
-                            background: rgba(<{$navbar_bg_top_rgb.r}>,<{$navbar_bg_top_rgb.g}>,<{$navbar_bg_top_rgb.b}>, <{$nav_bg_opacity}>);
-                        <{else}>
-                            background: linear-gradient(rgba(<{$navbar_bg_top_rgb.r}>,<{$navbar_bg_top_rgb.g}>,<{$navbar_bg_top_rgb.b}>, <{$nav_bg_opacity}>), rgba(<{$navbar_bg_bottom_rgb.r}>,<{$navbar_bg_bottom_rgb.g}>,<{$navbar_bg_bottom_rgb.b}>, <{$nav_bg_opacity}>));
-                        <{/if}>
-                    <{/if}>
-                <{/if}>
-                <{if $nav_margin}>
-                    margin: <{$nav_margin}>;
-                <{/if}>
-            }
-
             #nav-container-display{
-                <{if $nav_bg_opacity!=''}>
-                    <{if $nav_display_type=='not_full' and $navbar_pos!='fixed-top' and $navbar_pos!='fixed-bottom'}>
-                        <{if $navbar_bg_top==$navbar_bg_bottom}>
-                            background: rgba(<{$navbar_bg_top_rgb.r}>,<{$navbar_bg_top_rgb.g}>,<{$navbar_bg_top_rgb.b}>, <{$nav_bg_opacity}>);
-                        <{else}>
-                            background: linear-gradient(rgba(<{$navbar_bg_top_rgb.r}>,<{$navbar_bg_top_rgb.g}>,<{$navbar_bg_top_rgb.b}>, <{$nav_bg_opacity}>), rgba(<{$navbar_bg_bottom_rgb.r}>,<{$navbar_bg_bottom_rgb.g}>,<{$navbar_bg_bottom_rgb.b}>, <{$nav_bg_opacity}>));
-                        <{/if}>
-                    <{else}>
-                        background-color: transparent;
-                    <{/if}>
-                <{/if}>
-
-                <{if $nav_border_radius}>
-                    border-radius: <{$nav_border_radius}>;
-                <{/if}>
+                background-color: transparent;
             }
-
-            #main-nav {
-                <{if $nav_border_radius}>
-                    border-radius: <{$nav_border_radius}>;
-                    <{if $navbar_pos=='fixed-top' or $navbar_pos=='fixed-bottom'}>
-                        <{if $navbar_img}>
-                            opacity: <{$nav_bg_opacity}>;
-                        <{elseif $navbar_bg_top==$navbar_bg_bottom}>
-                            background-color: rgba(<{$navbar_bg_top_rgb.r}>,<{$navbar_bg_top_rgb.g}>,<{$navbar_bg_top_rgb.b}>, <{$nav_bg_opacity}>);
-                        <{else}>
-                            background: linear-gradient(rgba(<{$navbar_bg_top_rgb.r}>,<{$navbar_bg_top_rgb.g}>,<{$navbar_bg_top_rgb.b}>, <{$nav_bg_opacity}>), rgba(<{$navbar_bg_bottom_rgb.r}>,<{$navbar_bg_bottom_rgb.g}>,<{$navbar_bg_bottom_rgb.b}>, <{$nav_bg_opacity}>));
-                        <{/if}>
+            /* 不透明時 */
+            <{if $nav_bg_opacity=='' or $nav_bg_opacity==1}>
+                /* 沒有漸層 */
+                <{if $navbar_bg_top==$navbar_bg_bottom}>
+                    /* 非滿版狀態時 */
+                    <{if ($nav_display_type=='not_full' and $navbar_pos!='fixed-top' and $navbar_pos!='fixed-bottom') or ($navbar_pos=='fixed-top' or $navbar_pos=='fixed-bottom')}>
+                        #main-nav {
+                            background-color: <{$navbar_bg_top}>;
+                        }
+                        #nav-container{
+                            background-color: transparent;
+                        }
                     <{else}>
-                        background: transparent;
+                        /* 滿版狀態時，顏色放在外框，內容底透明 */
+                        #main-nav {
+                            background-color: transparent;
+                        }
+                        #nav-container{
+                            background-color: <{$navbar_bg_top}>;
+                        }
                     <{/if}>
+                <{else}>
+                    /* 有漸層 */
+                    /* 非滿版狀態時 */
+                    <{if ($nav_display_type=='not_full' and $navbar_pos!='fixed-top' and $navbar_pos!='fixed-bottom') or ($navbar_pos=='fixed-top' or $navbar_pos=='fixed-bottom')}>
+                        #main-nav {
+                            background: linear-gradient(<{$navbar_bg_top}>,<{$navbar_bg_bottom}>);
+                        }
+                        #nav-container{
+                            background-color: transparent;
+                        }
+                    <{else}>
+                        /* 滿版狀態時，顏色放在外框，內容底透明 */
+                        #main-nav {
+                            background-color: transparent;
+                        }
+                        #nav-container{
+                            background: linear-gradient(<{$navbar_bg_top}>,<{$navbar_bg_bottom}>);
+                        }
 
-                <{elseif $nav_bg_opacity}>
-                    <{if $nav_display_type=='not_full' and $navbar_pos!='fixed-top' and $navbar_pos!='fixed-bottom'}>
-                        <{if $navbar_img}>
-                            opacity: <{$nav_bg_opacity}>;
-                        <{elseif $navbar_bg_top==$navbar_bg_bottom}>
-                            background-color: rgba(<{$navbar_bg_top_rgb.r}>,<{$navbar_bg_top_rgb.g}>,<{$navbar_bg_top_rgb.b}>, <{$nav_bg_opacity}>);
-                        <{else}>
-                            background: linear-gradient(rgba(<{$navbar_bg_top_rgb.r}>,<{$navbar_bg_top_rgb.g}>,<{$navbar_bg_top_rgb.b}>, <{$nav_bg_opacity}>), rgba(<{$navbar_bg_bottom_rgb.r}>,<{$navbar_bg_bottom_rgb.g}>,<{$navbar_bg_bottom_rgb.b}>, <{$nav_bg_opacity}>));
-                        <{/if}>
                     <{/if}>
                 <{/if}>
-            }
+            <{else}>
+            /* 有設透明時 */
+                /* 沒有漸層 */
+                <{if $navbar_bg_top==$navbar_bg_bottom}>
+                    /* 非滿版狀態時 */
+                    <{if ($nav_display_type=='not_full' and $navbar_pos!='fixed-top' and $navbar_pos!='fixed-bottom') or ($navbar_pos=='fixed-top' or $navbar_pos=='fixed-bottom')}>
+                        #main-nav {
+                            background-color: rgba(<{$navbar_bg_top_rgb.r}>,<{$navbar_bg_top_rgb.g}>,<{$navbar_bg_top_rgb.b}>, <{$nav_bg_opacity}>);
+                        }
+                        #nav-container{
+                            background-color: transparent;
+                        }
+                    <{else}>
+                        /* 滿版狀態時，顏色放在外框，內容底透明 */
+                        #main-nav {
+                            background-color: transparent;
+                        }
+                        #nav-container{
+                            background-color: rgba(<{$navbar_bg_top_rgb.r}>,<{$navbar_bg_top_rgb.g}>,<{$navbar_bg_top_rgb.b}>, <{$nav_bg_opacity}>);
+                        }
+                    <{/if}>
+                <{else}>
+                    /* 有漸層 */
+                    /* 非滿版狀態時 */
+                    <{if ($nav_display_type=='not_full' and $navbar_pos!='fixed-top' and $navbar_pos!='fixed-bottom') or ($navbar_pos=='fixed-top' or $navbar_pos=='fixed-bottom')}>
+                        #main-nav {
+                            background: linear-gradient(rgba(<{$navbar_bg_top_rgb.r}>,<{$navbar_bg_top_rgb.g}>,<{$navbar_bg_top_rgb.b}>, <{$nav_bg_opacity}>), rgb(<{$navbar_bg_bottom_rgb.r}>,<{$navbar_bg_bottom_rgb.g}>,<{$navbar_bg_bottom_rgb.b}>, <{$nav_bg_opacity}>));
+                        }
+                        #nav-container{
+                            background-color: transparent;
+                        }
+                    <{else}>
+                        /* 滿版狀態時，顏色放在外框，內容底透明 */
+                        #main-nav {
+                            background-color: transparent;
+                        }
+                        #nav-container{
+                            background: linear-gradient(rgba(<{$navbar_bg_top_rgb.r}>,<{$navbar_bg_top_rgb.g}>,<{$navbar_bg_top_rgb.b}>, <{$nav_bg_opacity}>), rgb(<{$navbar_bg_bottom_rgb.r}>,<{$navbar_bg_bottom_rgb.g}>,<{$navbar_bg_bottom_rgb.b}>, <{$nav_bg_opacity}>));
+                        }
+                    <{/if}>
+                <{/if}>
+            <{/if}>
+
+            /* nav_display_type=<{$nav_display_type}>, navbar_pos=<{$navbar_pos}> */
+            <{if $nav_border_radius and $nav_display_type=='not_full' and $navbar_pos!='fixed-top' and $navbar_pos!='fixed-bottom'}>
+                #main-nav {
+                    border-radius: <{$nav_border_radius}>;
+                }
+            <{/if}>
+
+            <{if $navbar_pos=='fixed-top'}>
+                #main-nav {
+                    min-height: 50px;
+                }
+            <{/if}>
+
+
+            <{if $nav_margin!=''}>
+                #nav-container {
+                    margin: <{$nav_margin}>;
+                }
+            <{/if}>
+
+            <{if $nav_shadow=='1'}>
+                <{if $nav_display_type=='not_full'}>
+                    #main-nav {
+                        box-shadow: rgb(51, 51, 51) 0px 0px 5px 1px;
+                    }
+                <{else}>
+                    #nav-container {
+                        box-shadow: rgb(51, 51, 51) 0px 0px 5px 1px;
+                    }
+                <{/if}>
+            <{/if}>
 
 
             #footer-container{

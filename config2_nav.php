@@ -26,7 +26,7 @@ $theme_config[$i]['name'] = "nav_bg_opacity";
 $theme_config[$i]['text'] = TF_NAV_BG_OPACITY;
 $theme_config[$i]['desc'] = TF_NAV_BG_OPACITY_DESC;
 $theme_config[$i]['type'] = "text";
-$theme_config[$i]['default'] = "";
+$theme_config[$i]['default'] = "0.1";
 
 //nav 圓角
 $i++;

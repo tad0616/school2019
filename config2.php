@@ -30,7 +30,7 @@ $theme_config[$i]['name'] = "footer_img";
 $theme_config[$i]['text'] = TF_FOOTER_IMG;
 $theme_config[$i]['desc'] = TF_FOOTER_IMG_DESC;
 $theme_config[$i]['type'] = "file";
-$theme_config[$i]['default'] = "http://localhost/uploads/tad_themes/school2019/config2/config2_footer_img_2_2.png";
+$theme_config[$i]['default'] = "config2_footer_img_3_2.png";
 
 //頁尾底圖重複方式
 $i++;
@@ -39,7 +39,7 @@ $theme_config[$i]['text'] = TF_FOOTER_IMG_REPEAT;
 $theme_config[$i]['desc'] = TF_FOOTER_IMG_REPEAT_DESC;
 $theme_config[$i]['type'] = "select";
 $theme_config[$i]['options'] = array('repeat' => TF_BG_REPEAT_NORMAL, 'repeat-x' => TF_BG_REPEAT_X, 'repeat-y' => TF_BG_REPEAT_Y, 'no-repeat' => TF_BG_NO_REPEAT, 'no-repeat; background-size: cover' => TF_BG_NO_REPEAT_COVER, 'no-repeat; background-size: contain' => TF_BG_NO_REPEAT_CONTAIN);
-$theme_config[$i]['default'] = "repeat";
+$theme_config[$i]['default'] = "no-repeat; background-size: cover";
 
 //頁尾底圖位置
 $i++;

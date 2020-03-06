@@ -33,7 +33,7 @@ $theme_config[$i]['name'] = "logo_bg";
 $theme_config[$i]['text'] = TF_LOGO_BG1;
 $theme_config[$i]['desc'] = TF_LOGO_BG1_DESC;
 $theme_config[$i]['type'] = "file";
-$theme_config[$i]['default'] = "http://localhost/uploads/tad_themes/school2019/config2/config2_logo_bg_2_10.png";
+$theme_config[$i]['default'] = "config2_logo_bg_3_3.png";
 
 //logo 底圖重複方式
 $i++;
@@ -59,7 +59,7 @@ $theme_config[$i]['name'] = "logo_bg2";
 $theme_config[$i]['text'] = TF_LOGO_BG2;
 $theme_config[$i]['desc'] = TF_LOGO_BG2_DESC;
 $theme_config[$i]['type'] = "file";
-$theme_config[$i]['default'] = "http://localhost/uploads/tad_themes/school2019/config2/config2_logo_bg2_2_2.png";
+$theme_config[$i]['default'] = "config2_logo_bg2_3_2.png";
 
 //logo 底圖重複方式
 $i++;

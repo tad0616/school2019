@@ -1,6 +1,4 @@
 <?php
-// 請下載 http://localhost/uploads/tad_themes/school2019/bg/bg_2_18.png 並上傳至 C:/Users/tad/tn/UniServerZ/www/themes/school2019/images/bg/ 下
-// 請下載 http://localhost/uploads/tad_themes/school2019/logo/logo_2_4.png 並上傳至 C:/Users/tad/tn/UniServerZ/www/themes/school2019/images/logo/ 下
 //佈景種類是否可自訂
 $theme_change = 0;
 
@@ -83,20 +81,19 @@ tabs-2 背景圖
 $config_tabs[2] = 1;
 
 //上傳背景圖[theme_css.tpl]，值：可指定置於「themes/佈景/images/bg/」下的某一檔案名稱
-$config_enable['bg_img'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => 'bg_2_18.png');
+$config_enable['bg_img'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => 'sky.png');
 
 //背景顏色[theme_css.tpl]
 $config_enable['bg_color'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => '#b8e2ff');
 
 //背景重複[theme_css.tpl]，值： repeat （重複）, repeat-x （水平重複）, repeat-y （垂直重複）, no-repeat （不重複）
-$config_enable['bg_repeat'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => 'no-repeat; background-size: cover');
+$config_enable['bg_repeat'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => 'no-repeat');
 
 //背景模式[theme_css.tpl]，值： scroll （捲動）,fixed （固定）
 $config_enable['bg_attachment'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => 'scroll');
 
 //背景位置[theme_css.tpl]，值： left top （預設，左上）, right top （右上）, left bottom （左下）, right bottom （右下）, center center （中中）, center top （中上）, center bottom （中下）
 $config_enable['bg_position'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => 'center top');
-
 
 /*
 tabs-3 滑動圖片
@@ -113,7 +110,6 @@ $config_enable['slide_height'] = array('enable' => '1', 'min' => '', 'max' => ''
 //是否可上傳滑動圖片[slideshow_responsive.tpl]
 $config_enable['use_slide'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => '1');
 
-
 /*
 tabs-4 logo圖
  */
@@ -121,7 +117,7 @@ tabs-4 logo圖
 $config_tabs[4] = 1;
 
 // 上傳logo圖[logo.tpl]，值：可指定置於「themes/佈景/images/logo/」下的某一檔案名稱
-$config_enable['logo_img'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => 'logo_2_4.png');
+$config_enable['logo_img'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => 'logo.png');
 
 //logo圖位置[logo.tpl]，值： slide （在滑動圖文上）, page （在頁面上）
 $config_enable['logo_position'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => 'page');
@@ -140,7 +136,6 @@ $config_enable['logo_left'] = array('enable' => '1', 'min' => '', 'max' => '', '
 
 //Logo置中[logo.tpl]，值：1,0
 $config_enable['logo_center'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => '0');
-
 
 /*
 tabs-5 區塊標題列
@@ -173,14 +168,14 @@ $config_enable['bt_bg_img'] = array('enable' => '1', 'min' => '', 'max' => '', '
 $config_enable['bt_bg_repeat'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => '0');
 
 //區塊整體樣式手動設定[theme_css_blocks.tpl]，值： 1 （重複）, 0 （不重複）
-$config_enable['block_style'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => 'background: rgba(255, 255, 255, 0.5); 
-border: none; 
+$config_enable['block_style'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => 'background: rgba(255, 255, 255, 0.5);
+border: none;
 border-radius: 6px;
-padding: 0px; 
+padding: 0px;
 margin:0px 0px 20px;');
 
 //區塊標題區樣式手動設定[theme_css_blocks.tpl]，值： 1 （重複）, 0 （不重複）
-$config_enable['block_title_style'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => 'padding:6px; 
+$config_enable['block_title_style'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => 'padding:6px;
 text-align:center;
 font-family: 微軟正黑體;
 text-shadow: 0px 1px #0c4d5b, 1px 0px #0c4d5b, -1px 0px #0c4d5b, 0px -1px #0c4d5b, -1px -1px #0c4d5b, 1px 1px #0c4d5b, 1px -1px #0c4d5b, -1px 1px #0c4d5b;');
@@ -198,10 +193,25 @@ $config_enable['bt_xx']['centerRightBlock']：上中右區塊設定
 $config_enable['bt_xx']['centerBottomBlock']：下中區塊設定
 $config_enable['bt_xx']['centerBottomLeftBlock']：下中左區塊設定
 $config_enable['bt_xx']['centerBottomRightBlock']：下中右區塊設定
+$config_enable['bt_xx']['footerCenterBlock']：頁尾中區塊設定
+$config_enable['bt_xx']['footerLeftBlock']：頁尾左區塊設定
+$config_enable['bt_xx']['footerRightBlock']：頁尾右區塊設定
 例如：
 $config_enable['bt_bg_color']['leftBlock'] = array('enable'=>1, 'min' => '', 'max' => '', 'require'=>0 , 'default' => '#7CBBBB');
 $config_enable['bt_bg_color']['rightBlock'] = array('enable'=>1, 'min' => '', 'max' => '', 'require'=>0 , 'default' => '#D2C38E');
  */
+$config_enable['block_style']['footerCenterBlock'] = array('enable' => 1, 'min' => '', 'max' => '', 'require' => 0, 'default' => 'border: none;
+border-radius: 6px;
+padding: 0px;
+margin:0px 0px 20px;');
+$config_enable['block_style']['footerLeftBlock'] = array('enable' => 1, 'min' => '', 'max' => '', 'require' => 0, 'default' => 'border: none;
+border-radius: 6px;
+padding: 0px;
+margin:0px 0px 20px;');
+$config_enable['block_style']['footerRightBlock'] = array('enable' => 1, 'min' => '', 'max' => '', 'require' => 0, 'default' => 'border: none;
+border-radius: 6px;
+padding: 0px;
+margin:0px 0px 20px;');
 
 /*
 tabs-6 導覽工具列
