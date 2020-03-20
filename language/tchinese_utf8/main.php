@@ -123,3 +123,8 @@ define('TF_NAV_BORDER_RADIUS', '導覽列圓角設定');
 define('TF_NAV_BORDER_RADIUS_DESC', '可針對四個角設定圓角，如「8px 8px 0px 0px」，僅「' . TF_DISPLAY_TYPE_NOT_FULL . '」時有作用');
 define('TF_NAV_MARGIN', '導覽列外間距設定');
 define('TF_NAV_MARGIN_DESC', '可針對上右下左設定間距，如「8px 0px 8px 0px」');
+
+define('TF_SLIDE_MT', '上方距離');
+define('TF_SLIDE_MT_DESC', '滑動圖距離上方多少像素（px）');
+define('TF_SLIDE_MB', '下方距離');
+define('TF_SLIDE_MB_DESC', '下方距離下方多少像素（px）');

@@ -84,14 +84,14 @@ define('TF_CONTENT_SHADOW_DESC', 'If "Yes" will add a shadow around the content 
 define('TF_USE_CONTAINER_WIDTH', 'Overall page display width');
 define('TF_USE_CONTAINER_WIDTH_DESC', '12 is full version, will be left blank after 12 or so');
 
-Define('TF_LOGO_AUTO', 'Do you want to use automatic pairing');
-Define('TF_LOGO_AUTO_DESC', '');
-Define('TF_LOGO_PATH', 'Illustration placement path');
-Define('TF_LOGO_PATH_DESC', '');
-Define('TF_LOGO_VAR', 'Automatically pair variable name');
-Define('TF_LOGO_VAR_DESC', '');
-Define('TF_LOGO_EXT', 'Figure extension name');
-Define('TF_LOGO_EXT_DESC', '');
+define('TF_LOGO_AUTO', 'Do you want to use automatic pairing');
+define('TF_LOGO_AUTO_DESC', '');
+define('TF_LOGO_PATH', 'Illustration placement path');
+define('TF_LOGO_PATH_DESC', '');
+define('TF_LOGO_VAR', 'Automatically pair variable name');
+define('TF_LOGO_VAR_DESC', '');
+define('TF_LOGO_EXT', 'Figure extension name');
+define('TF_LOGO_EXT_DESC', '');
 
 define('TF_BG_IMG', 'background-image');
 define('TF_BG_COLOR', 'background-color');
@@ -124,3 +124,8 @@ define('TF_NAV_BORDER_RADIUS', 'Nav border-radius set');
 define('TF_NAV_BORDER_RADIUS_DESC', 'Only works if \"' . TF_DISPLAY_TYPE_NOT_FULL . '\"');
 define('TF_NAV_MARGIN', 'Offline navigation margin setting');
 define('TF_NAV_MARGIN_DESC', 'You can set the spacing for the top right bottom left, such as "8px 0px 8px 0px"');
+
+define('TF_SLIDE_MT', 'Top distance');
+define('TF_SLIDE_MT_DESC', 'How many pixels (px) above the slide image');
+define('TF_SLIDE_MB', 'Below distance');
+define('TF_SLIDE_MB_DESC', 'How many pixels (px) from below');

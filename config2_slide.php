@@ -43,3 +43,19 @@ $theme_config[$i]['text'] = TF_SLIDE_NAV;
 $theme_config[$i]['desc'] = TF_SLIDE_NAV_DESC;
 $theme_config[$i]['type'] = "yesno";
 $theme_config[$i]['default'] = "0";
+
+//slide 上方距離
+$i++;
+$theme_config[$i]['name'] = "slide_mt";
+$theme_config[$i]['text'] = TF_SLIDE_MT;
+$theme_config[$i]['desc'] = TF_SLIDE_MT_DESC;
+$theme_config[$i]['type'] = "text";
+$theme_config[$i]['default'] = "0";
+
+//slide 下方距離
+$i++;
+$theme_config[$i]['name'] = "slide_mb";
+$theme_config[$i]['text'] = TF_SLIDE_MB;
+$theme_config[$i]['desc'] = TF_SLIDE_MB_DESC;
+$theme_config[$i]['type'] = "text";
+$theme_config[$i]['default'] = "0";

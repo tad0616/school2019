@@ -197,6 +197,52 @@
                     background-position: <{$footer_img_position}>;
                 <{/if}>
             }
+
+            #xoops_theme_slide{
+                <{if $slide_mt}>margin-top: <{$slide_mt}>px;<{/if}>
+                <{if $slide_mb}>margin-bottom: <{$slide_mb}>px;<{/if}>
+            }
+
+            blockquote {
+                position: relative;
+                text-align: left;
+                padding: 1.2em 0 2em 38px;
+                border: none;
+                margin: 20px auto 20px;
+                max-width: 800px;
+                width:100%;
+                display: block;
+            }
+
+            blockquote:after {
+                content: "";
+                display: block;
+                width: 2px;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                color: #66cc66;
+                top: 0;
+                background: -moz-linear-gradient(top,#66cc66 0%,#66cc66 60%,rgba(255,255,255,0) 100%);
+                background: -webkit-linear-gradient(top,#66cc66 0%,#66cc66 60%,rgba(255,255,255,0) 100%);
+                /* background: linear-gradient(to bottom,#66cc66 0%,#66cc66 60%,rgba(255,255,255,0) 100%); */
+            }
+
+
+            blockquote > cite,
+            blockquote > p > cite {
+                display: block;
+                font-size: 1.1em;
+                line-height: 1.3em;
+                font-weight: 700;
+                font-style: normal;
+                margin-top: 1.1em;
+                letter-spacing: 0;
+                font-style:italic;
+            }
+
+
+
         </style>
     </head>
 
@@ -208,8 +254,13 @@
                 <div class="row <{if $logo_shadow=='1' and $logo_display_type!='not_full'}>xoops_content_shadow<{/if}>">
                     <div class="col-sm"></div>
                     <div class="col-sm-<{if $logo_display_type=='all_full'}>12<{else}><{$container_width}><{/if}>">
+                        <{assign var=mylogofile value=$xoops_rootpath$logo_path`$smarty.get.$logo_var`.$logo_ext}>
                         <div id="logo-container-display" class="row <{if $logo_shadow=='1' and $logo_display_type=='not_full'}>xoops_content_shadow<{/if}>">
-                            <{includeq file="$xoops_rootpath/modules/tadtools/themes4_tpl/logo.tpl"}>
+                            <{if $logo_auto==1 and $smarty.server.REQUEST_URI|strpos:$smarty.get.$logo_var!==false and $mylogofile|file_exists}>
+                                <a href="<{$xoops_url}>/index.php?<{$logo_var}>=<{$smarty.get.$logo_var}>"><img id="website_logo" src="<{$xoops_url}><{$logo_path}><{$smarty.get.$logo_var}>.<{$logo_ext}>" style="max-width: 100%;<{if $logo_position=="slide"}>position: absolute; z-index: 5; <{$logo_place}><{else}>position: relative; z-index:10;<{/if}>" alt="<{$xoops_sitename}>" title="<{$xoops_sitename}>" class="img-fluid"></a>
+                            <{else}>
+                                <{includeq file="$xoops_rootpath/modules/tadtools/themes4_tpl/logo.tpl"}>
+                            <{/if}>
                         </div>
                     </div>
                     <div class="col-sm"></div>
