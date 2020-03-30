@@ -89,6 +89,9 @@ $config_enable['bg_color'] = array('enable' => '1', 'min' => '', 'max' => '', 'r
 //背景重複[theme_css.tpl]，值： repeat （重複）, repeat-x （水平重複）, repeat-y （垂直重複）, no-repeat （不重複）
 $config_enable['bg_repeat'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => 'no-repeat');
 
+//背景縮放[theme_css.tpl]，值： cover （放大圖片填滿畫面）, contain （縮放以呈現完整圖片）
+$config_enable['bg_size'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '', 'default' => 'auto');
+
 //背景模式[theme_css.tpl]，值： scroll （捲動）,fixed （固定）
 $config_enable['bg_attachment'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => 'scroll');
 

@@ -35,6 +35,8 @@ define('TF_LOGO_BG1_REPEAT', 'logo background 1 repeating method');
 define('TF_LOGO_BG1_REPEAT_DESC', 'Logo background 1 repeating');
 define('TF_LOGO_BG1_POSITION', 'Logo background 1 image location');
 define('TF_LOGO_BG1_POSITION_DESC', 'Logo background 1 image location');
+define('TF_LOGO_BG1_SIZE', 'logo background 1 image size');
+define('TF_LOGO_BG1_SIZE_DESC', 'logo background 1 image size');
 
 define('TF_LOGO_BG2', 'Background 2 of the logo area');
 define('TF_LOGO_BG2_DESC', 'If "Yes" will add a background 2 to the logo area');
@@ -42,6 +44,8 @@ define('TF_LOGO_BG2_REPEAT', 'logo background 2 repeating method');
 define('TF_LOGO_BG2_REPEAT_DESC', 'Logo background 2 repeating');
 define('TF_LOGO_BG2_POSITION', 'Logo background 2 image location');
 define('TF_LOGO_BG2_POSITION_DESC', 'Logo background 2 image location');
+define('TF_LOGO_BG2_SIZE', 'logo background 2 image size');
+define('TF_LOGO_BG2_SIZE_DESC', 'logo background 2 image size');
 
 define('TF_SLIDE_DISPLAY_TYPE', 'Sliding area display mode');
 define('TF_SLIDE_DISPLAY_TYPE_DESC', 'How to render the sliding view');
@@ -62,8 +66,10 @@ define('TF_FOOTER_BGCOLOR', 'The bottom of the page shows the background color')
 define('TF_FOOTER_BGCOLOR_DESC', 'The bottom of the page shows the background color');
 define('TF_FOOTER_IMG', 'End of page');
 define('TF_FOOTER_IMG_DESC', 'Can upload the desired basemap yourself');
-define('TF_FOOTER_IMG_REPEAT', 'Repeat method of footer and bottom image');
-define('TF_FOOTER_IMG_REPEAT_DESC', 'Repeat method of footer and bottom image');
+define('TF_FOOTER_IMG_REPEAT', 'Repeat method of footer  background');
+define('TF_FOOTER_IMG_REPEAT_DESC', 'Repeat method of footer  background');
+define('TF_FOOTER_IMG_SIZE', 'image-size of footer  background');
+define('TF_FOOTER_IMG_SIZE_DESC', 'image-size of footer  background');
 define('TF_FOOTER_IMG_POSITION', 'Bottom of bottom page position');
 define('TF_FOOTER_IMG_POSITION_DESC', 'Footmap position');
 define('TF_FOOTER_COLOR', 'End of page text color');
@@ -113,6 +119,26 @@ define('TF_BG_POSITION_RB', 'right bottom');
 define('TF_BG_POSITION_CC', 'center center');
 define('TF_BG_POSITION_CT', 'center top');
 define('TF_BG_POSITION_CB', 'center bottom');
+define('TF_BG_BG2', 'background-image 2');
+define('TF_BG_BG2_DESC', 'background-image 2');
+define('TF_BG_BG2_REPEAT', 'background-repeart 2');
+define('TF_BG_BG2_REPEAT_DESC', 'background-repeart 2');
+define('TF_BG_BG2_POSITION', 'background-repeart 2');
+define('TF_BG_BG2_POSITION_DESC', 'background-repeart 2');
+define('TF_BG_BG2_SIZE', 'background-size 2');
+define('TF_BG_BG2_SIZE_DESC', 'background-size 2');
+define('TF_BG_BG3', 'background-image 3');
+define('TF_BG_BG3_DESC', 'background-image 3');
+define('TF_BG_BG3_REPEAT', 'background-repeart 3');
+define('TF_BG_BG3_REPEAT_DESC', 'background-repeart 3');
+define('TF_BG_BG3_POSITION', 'background-repeart 3');
+define('TF_BG_BG3_POSITION_DESC', 'background-repeart 3');
+define('TF_BG_BG3_SIZE', 'background-size 3');
+define('TF_BG_BG3_SIZE_DESC', 'background-size 3');
+
+define('TF_BG_SIZE_NONE', 'none');
+define('TF_BG_SIZE_COVER', 'cover');
+define('TF_BG_SIZE_CONTAIN', 'contain');
 
 define('TF_NAV_DISPLAY_TYPE', 'Navigation column area display mode');
 define('TF_NAV_DISPLAY_TYPE_DESC', 'How to render the navigation column');

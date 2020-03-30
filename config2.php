@@ -1,4 +1,8 @@
 <?php
+$bg_file['repeat'] = array('repeat' => TF_BG_REPEAT_NORMAL, 'repeat-x' => TF_BG_REPEAT_X, 'repeat-y' => TF_BG_REPEAT_Y, 'no-repeat' => TF_BG_NO_REPEAT);
+$bg_file['position'] = array('left top' => TF_BG_POSITION_LT, 'right top' => TF_BG_POSITION_RT, 'left bottom' => TF_BG_POSITION_LB, 'right bottom' => TF_BG_POSITION_RB, 'center center' => TF_BG_POSITION_CC, 'center top' => TF_BG_POSITION_CT, 'center bottom' => TF_BG_POSITION_CB);
+$bg_file['size'] = array('auto' => TF_BG_SIZE_NONE, 'cover' => TF_BG_SIZE_COVER, 'contain' => TF_BG_SIZE_CONTAIN);
+
 $i = 0;
 $theme_config[$i]['name'] = "show_var";
 $theme_config[$i]['text'] = TF_SHOW_VAR;
@@ -29,26 +33,12 @@ $i++;
 $theme_config[$i]['name'] = "footer_img";
 $theme_config[$i]['text'] = TF_FOOTER_IMG;
 $theme_config[$i]['desc'] = TF_FOOTER_IMG_DESC;
-$theme_config[$i]['type'] = "file";
+$theme_config[$i]['type'] = "bg_file";
 $theme_config[$i]['default'] = "config2_footer_img_3_2.png";
-
-//頁尾底圖重複方式
-$i++;
-$theme_config[$i]['name'] = "footer_img_repeat";
-$theme_config[$i]['text'] = TF_FOOTER_IMG_REPEAT;
-$theme_config[$i]['desc'] = TF_FOOTER_IMG_REPEAT_DESC;
-$theme_config[$i]['type'] = "select";
-$theme_config[$i]['options'] = array('repeat' => TF_BG_REPEAT_NORMAL, 'repeat-x' => TF_BG_REPEAT_X, 'repeat-y' => TF_BG_REPEAT_Y, 'no-repeat' => TF_BG_NO_REPEAT, 'no-repeat; background-size: cover' => TF_BG_NO_REPEAT_COVER, 'no-repeat; background-size: contain' => TF_BG_NO_REPEAT_CONTAIN);
-$theme_config[$i]['default'] = "no-repeat; background-size: cover";
-
-//頁尾底圖位置
-$i++;
-$theme_config[$i]['name'] = "footer_img_position";
-$theme_config[$i]['text'] = TF_FOOTER_IMG_POSITION;
-$theme_config[$i]['desc'] = TF_FOOTER_IMG_POSITION_DESC;
-$theme_config[$i]['type'] = "select";
-$theme_config[$i]['options'] = array('left top' => TF_BG_POSITION_LT, 'right top' => TF_BG_POSITION_RT, 'left bottom' => TF_BG_POSITION_LB, 'right bottom' => TF_BG_POSITION_RB, 'center center' => TF_BG_POSITION_CC, 'center top' => TF_BG_POSITION_CT, 'center bottom' => TF_BG_POSITION_CB);
-$theme_config[$i]['default'] = "left top";
+$theme_config[$i]['options'] = $bg_file;
+$theme_config[$i]['repeat'] = "no-repeat";
+$theme_config[$i]['position'] = "left top";
+$theme_config[$i]['size'] = "contain";
 
 //頁尾底圖CSS設定
 $i++;

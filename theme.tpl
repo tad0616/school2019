@@ -41,12 +41,37 @@
                 color:<{$footer_color}>;
             }
 
+            <{if $bg_bg2 and $bg_bg3}>
+                body{
+                    background-image: url('<{$bg_bg3}>'), url('<{$bg_bg2}>'), url('<{$bg_img}>');
+                    background-position: <{$bg_bg3_position}>, <{$bg_bg2_position}>, <{$bg_position}>;
+                    background-repeat: <{$bg_bg3_repeat}>, <{$bg_bg2_repeat}>, <{$bg_repeat}>;
+                    background-size: <{$bg_bg3_size}>, <{$bg_bg2_size}>, <{$bg_size}>;
+                }
+            <{elseif $bg_bg2}>
+                body{
+                    background-image: url('<{$bg_bg2}>'), url('<{$bg_img}>');
+                    background-position: <{$bg_bg2_position}>, <{$bg_position}>;
+                    background-repeat: <{$bg_bg2_repeat}>, <{$bg_repeat}>;
+                    background-size: <{$bg_bg2_size}>, <{$bg_size}>;
+                }
+            <{elseif $bg_bg3}>
+                body{
+                    background-image: url('<{$bg_bg3}>'),url('<{$bg_img}>');
+                    background-position: <{$bg_bg3_position}>, <{$bg_position}>;
+                    background-repeat: <{$bg_bg3_repeat}>, <{$bg_repeat}>;
+                    background-size: <{$bg_bg3_size}>, <{$bg_size}>;
+                }
+            <{/if}>
+
+
             <{if $logo_bg}>
                 #logo-container{
                     <{if $logo_display_type!='not_full'}>
                     background-image: url('<{$logo_bg}>') <{if $logo_bg2}>, url('<{$logo_bg2}>')<{/if}>;
                     background-position: <{$logo_bg_position}><{if $logo_bg2_position}>, <{$logo_bg2_position}><{/if}>;
                     background-repeat: <{$logo_bg_repeat}><{if $logo_bg2_repeat}>, <{$logo_bg2_repeat}><{/if}>;
+                    background-size: <{$logo_bg_size}><{if $logo_bg2_size}>, <{$logo_bg2_size}><{/if}>;
                     <{else}>
                     background-image: none;
                     <{/if}>
@@ -57,6 +82,7 @@
                     background-image: url('<{$logo_bg}>') <{if $logo_bg2}>, url('<{$logo_bg2}>')<{/if}>;
                     background-position: <{$logo_bg_position}><{if $logo_bg2_position}>, <{$logo_bg2_position}><{/if}>;
                     background-repeat: <{$logo_bg_repeat}><{if $logo_bg2_repeat}>, <{$logo_bg2_repeat}><{/if}>;
+                    background-size: <{$logo_bg_size}><{if $logo_bg2_size}>, <{$logo_bg2_size}><{/if}>;
                     <{else}>
                     background-image: none;
                     <{/if}>
@@ -188,6 +214,7 @@
                 <{if $footer_display_type!='not_full'}>
                     background-repeat: <{$footer_img_repeat}>;
                     background-position: <{$footer_img_position}>;
+                    background-size: <{$footer_img_size}>;
                 <{/if}>
             }
 
@@ -195,6 +222,7 @@
                 <{if $footer_display_type=='not_full'}>
                     background-repeat: <{$footer_img_repeat}>;
                     background-position: <{$footer_img_position}>;
+                    background-size: <{$footer_img_size}>;
                 <{/if}>
             }
 

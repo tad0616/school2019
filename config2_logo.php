@@ -1,4 +1,7 @@
 <?php
+$bg_file['repeat'] = array('repeat' => TF_BG_REPEAT_NORMAL, 'repeat-x' => TF_BG_REPEAT_X, 'repeat-y' => TF_BG_REPEAT_Y, 'no-repeat' => TF_BG_NO_REPEAT);
+$bg_file['position'] = array('left top' => TF_BG_POSITION_LT, 'right top' => TF_BG_POSITION_RT, 'left bottom' => TF_BG_POSITION_LB, 'right bottom' => TF_BG_POSITION_RB, 'center center' => TF_BG_POSITION_CC, 'center top' => TF_BG_POSITION_CT, 'center bottom' => TF_BG_POSITION_CB);
+$bg_file['size'] = array('auto' => TF_BG_SIZE_NONE, 'cover' => TF_BG_SIZE_COVER, 'contain' => TF_BG_SIZE_CONTAIN);
 
 $i = 0;
 //logo區域顯示模式
@@ -32,52 +35,24 @@ $i++;
 $theme_config[$i]['name'] = "logo_bg";
 $theme_config[$i]['text'] = TF_LOGO_BG1;
 $theme_config[$i]['desc'] = TF_LOGO_BG1_DESC;
-$theme_config[$i]['type'] = "file";
+$theme_config[$i]['type'] = "bg_file";
 $theme_config[$i]['default'] = "config2_logo_bg_3_3.png";
-
-//logo 底圖重複方式
-$i++;
-$theme_config[$i]['name'] = "logo_bg_repeat";
-$theme_config[$i]['text'] = TF_LOGO_BG1_REPEAT;
-$theme_config[$i]['desc'] = TF_LOGO_BG1_REPEAT_DESC;
-$theme_config[$i]['type'] = "select";
-$theme_config[$i]['options'] = array('repeat' => TF_BG_REPEAT_NORMAL, 'repeat-x' => TF_BG_REPEAT_X, 'repeat-y' => TF_BG_REPEAT_Y, 'no-repeat' => TF_BG_NO_REPEAT, 'no-repeat; background-size: cover' => TF_BG_NO_REPEAT_COVER, 'no-repeat; background-size: contain' => TF_BG_NO_REPEAT_CONTAIN);
-$theme_config[$i]['default'] = "no-repeat";
-
-//logo 底圖重複方式
-$i++;
-$theme_config[$i]['name'] = "logo_bg_position";
-$theme_config[$i]['text'] = TF_LOGO_BG1_POSITION;
-$theme_config[$i]['desc'] = TF_LOGO_BG1_POSITION_DESC;
-$theme_config[$i]['type'] = "select";
-$theme_config[$i]['options'] = array('left top' => TF_BG_POSITION_LT, 'right top' => TF_BG_POSITION_RT, 'left bottom' => TF_BG_POSITION_LB, 'right bottom' => TF_BG_POSITION_RB, 'center center' => TF_BG_POSITION_CC, 'center top' => TF_BG_POSITION_CT, 'center bottom' => TF_BG_POSITION_CB);
-$theme_config[$i]['default'] = "right top";
+$theme_config[$i]['options'] = $bg_file;
+$theme_config[$i]['repeat'] = "no-repeat";
+$theme_config[$i]['position'] = "right top";
+$theme_config[$i]['size'] = "auto";
 
 //logo1 底圖
 $i++;
 $theme_config[$i]['name'] = "logo_bg2";
 $theme_config[$i]['text'] = TF_LOGO_BG2;
 $theme_config[$i]['desc'] = TF_LOGO_BG2_DESC;
-$theme_config[$i]['type'] = "file";
+$theme_config[$i]['type'] = "bg_file";
 $theme_config[$i]['default'] = "config2_logo_bg2_3_2.png";
-
-//logo 底圖重複方式
-$i++;
-$theme_config[$i]['name'] = "logo_bg2_repeat";
-$theme_config[$i]['text'] = TF_LOGO_BG2_REPEAT;
-$theme_config[$i]['desc'] = TF_LOGO_BG2_REPEAT_DESC;
-$theme_config[$i]['type'] = "select";
-$theme_config[$i]['options'] = array('repeat' => TF_BG_REPEAT_NORMAL, 'repeat-x' => TF_BG_REPEAT_X, 'repeat-y' => TF_BG_REPEAT_Y, 'no-repeat' => TF_BG_NO_REPEAT, 'no-repeat; background-size: cover' => TF_BG_NO_REPEAT_COVER, 'no-repeat; background-size: contain' => TF_BG_NO_REPEAT_CONTAIN);
-$theme_config[$i]['default'] = "no-repeat";
-
-//logo 底圖位置
-$i++;
-$theme_config[$i]['name'] = "logo_bg2_position";
-$theme_config[$i]['text'] = TF_LOGO_BG2_POSITION;
-$theme_config[$i]['desc'] = TF_LOGO_BG2_POSITION_DESC;
-$theme_config[$i]['type'] = "select";
-$theme_config[$i]['options'] = array('left top' => TF_BG_POSITION_LT, 'right top' => TF_BG_POSITION_RT, 'left bottom' => TF_BG_POSITION_LB, 'right bottom' => TF_BG_POSITION_RB, 'center center' => TF_BG_POSITION_CC, 'center top' => TF_BG_POSITION_CT, 'center bottom' => TF_BG_POSITION_CB);
-$theme_config[$i]['default'] = "left top";
+$theme_config[$i]['options'] = $bg_file;
+$theme_config[$i]['repeat'] = "no-repeat";
+$theme_config[$i]['position'] = "left top";
+$theme_config[$i]['size'] = "auto";
 
 //logo 是否使用自動配對
 $i++;
