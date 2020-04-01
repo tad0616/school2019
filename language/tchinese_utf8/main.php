@@ -138,6 +138,7 @@ define('TF_BG_BG3_SIZE_DESC', '背景底圖3尺寸');
 define('TF_BG_SIZE_NONE', '無');
 define('TF_BG_SIZE_COVER', '放大圖片填滿畫面');
 define('TF_BG_SIZE_CONTAIN', '縮放以呈現完整圖片');
+define('TF_BG_SIZE_FULL', '滿版');
 
 define('TF_NAV_DISPLAY_TYPE', '導覽列顯示模式');
 define('TF_NAV_DISPLAY_TYPE_DESC', '以何種方式來呈現導覽列');

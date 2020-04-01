@@ -86,7 +86,6 @@ h5 {
   border-collapse: collapse;
 }
 
-
 table.outer th{
   background-color: #5e5e5e;
   color:white;
@@ -133,4 +132,3 @@ div.comText img {
   width: expression(this.width > 500 ? "500px": this.width);
   overflow: hidden;
 }
-

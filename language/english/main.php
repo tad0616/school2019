@@ -139,6 +139,7 @@ define('TF_BG_BG3_SIZE_DESC', 'background-size 3');
 define('TF_BG_SIZE_NONE', 'none');
 define('TF_BG_SIZE_COVER', 'cover');
 define('TF_BG_SIZE_CONTAIN', 'contain');
+define('TF_BG_SIZE_FULL', '100%');
 
 define('TF_NAV_DISPLAY_TYPE', 'Navigation column area display mode');
 define('TF_NAV_DISPLAY_TYPE_DESC', 'How to render the navigation column');
