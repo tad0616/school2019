@@ -343,8 +343,6 @@
         </div>
 
         <!-- 頁尾區域 -->
-        <{if $xoops_footer}>
-
         <div class="container-fluid" id="footer-container">
             <div class="row  <{if $footer_shadow=='1' and $footer_display_type!='not_full'}>xoops_content_shadow<{/if}>">
                 <div class="col-sm"></div>
@@ -362,7 +360,6 @@
                 <div class="col-sm"></div>
             </div>
         </div>
-        <{/if}>
 
         <{if $navbar_pos=='fixed-top' or $navbar_pos=='fixed-bottom'}>
             <div id="nav-container-display" style="width:100%;">
