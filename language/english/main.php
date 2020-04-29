@@ -156,3 +156,6 @@ define('TF_SLIDE_MT', 'Top distance');
 define('TF_SLIDE_MT_DESC', 'How many pixels (px) above the slide image');
 define('TF_SLIDE_MB', 'Below distance');
 define('TF_SLIDE_MB_DESC', 'How many pixels (px) from below');
+
+define('TF_NAV_MARGIN_TOP', 'How far above the main content area should be when the navigation bar is locked');
+define('TF_NAV_MARGIN_TOP_DESC', 'Default is 50(px), if you feel the space is too large, you can reduce it by yourself');

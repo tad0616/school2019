@@ -57,7 +57,7 @@ $config_enable['clb_width'] = array('enable' => '1', 'min' => '', 'max' => '', '
 $config_enable['crb_width'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => '49%');
 
 //離上邊界距離[自]
-$config_enable['margin_top'] = array('enable' => '0', 'min' => '', 'max' => '', 'require' => '0', 'default' => '0');
+$config_enable['margin_top'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => '0');
 
 //文字大小[theme_css.tpl]
 $config_enable['font_size'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => '1em');
@@ -175,13 +175,13 @@ $config_enable['block_style'] = array('enable' => '1', 'min' => '', 'max' => '',
 border: none;
 border-radius: 6px;
 padding: 0px;
-margin:0px 0px 20px;', );
+margin:0px 0px 20px;');
 
 //區塊標題區樣式手動設定[theme_css_blocks.tpl]，值： 1 （重複）, 0 （不重複）
 $config_enable['block_title_style'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => 'padding:6px;
 text-align:center;
 font-family: 微軟正黑體;
-text-shadow: 0px 1px #0c4d5b, 1px 0px #0c4d5b, -1px 0px #0c4d5b, 0px -1px #0c4d5b, -1px -1px #0c4d5b, 1px 1px #0c4d5b, 1px -1px #0c4d5b, -1px 1px #0c4d5b;', );
+text-shadow: 0px 1px #0c4d5b, 1px 0px #0c4d5b, -1px 0px #0c4d5b, 0px -1px #0c4d5b, -1px -1px #0c4d5b, 1px 1px #0c4d5b, 1px -1px #0c4d5b, -1px 1px #0c4d5b;');
 
 //區塊內容區樣式手動設定[theme_css_blocks.tpl]，值： 1 （重複）, 0 （不重複）
 $config_enable['block_content_style'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => 'padding: 5px 0px 10px;');
@@ -206,15 +206,15 @@ $config_enable['bt_bg_color']['rightBlock'] = array('enable'=>1, 'min' => '', 'm
 $config_enable['block_style']['footerCenterBlock'] = array('enable' => 1, 'min' => '', 'max' => '', 'require' => 0, 'default' => 'border: none;
 border-radius: 6px;
 padding: 0px;
-margin:0px 0px 20px;', );
+margin:0px 0px 20px;');
 $config_enable['block_style']['footerLeftBlock'] = array('enable' => 1, 'min' => '', 'max' => '', 'require' => 0, 'default' => 'border: none;
 border-radius: 6px;
 padding: 0px;
-margin:0px 0px 20px;', );
+margin:0px 0px 20px;');
 $config_enable['block_style']['footerRightBlock'] = array('enable' => 1, 'min' => '', 'max' => '', 'require' => 0, 'default' => 'border: none;
 border-radius: 6px;
 padding: 0px;
-margin:0px 0px 20px;', );
+margin:0px 0px 20px;');
 
 /*
 tabs-6 導覽工具列

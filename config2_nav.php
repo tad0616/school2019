@@ -43,3 +43,11 @@ $theme_config[$i]['text'] = TF_NAV_MARGIN;
 $theme_config[$i]['desc'] = TF_NAV_MARGIN_DESC;
 $theme_config[$i]['type'] = "text";
 $theme_config[$i]['default'] = "15px 0px 0px 0px";
+
+//nav 間距
+$i++;
+$theme_config[$i]['name'] = "nav_margin_top";
+$theme_config[$i]['text'] = TF_NAV_MARGIN_TOP;
+$theme_config[$i]['desc'] = TF_NAV_MARGIN_TOP_DESC;
+$theme_config[$i]['type'] = "text";
+$theme_config[$i]['default'] = "40";

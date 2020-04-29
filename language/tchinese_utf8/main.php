@@ -155,3 +155,6 @@ define('TF_SLIDE_MT', '上方距離');
 define('TF_SLIDE_MT_DESC', '滑動圖距離上方多少像素（px）');
 define('TF_SLIDE_MB', '下方距離');
 define('TF_SLIDE_MB_DESC', '下方距離下方多少像素（px）');
+
+define('TF_NAV_MARGIN_TOP', '上方鎖定時，主內容區要距離上方多遠');
+define('TF_NAV_MARGIN_TOP_DESC', '預設是 50（px），若覺得空太大，可自行縮小');
