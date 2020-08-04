@@ -20,9 +20,7 @@
 
         <!-- 局部套用的樣式，如果有載入完整樣式 theme_css.tpl 那就不需要這一部份 -->
         <{includeq file="$xoops_rootpath/modules/tadtools/themes4_tpl/theme_css.tpl"}>
-        <{if $navbar_pos=='fixed-top'}>
-            <{assign var=margin_top value=$nav_margin_top}>
-        <{/if}>
+
         <style type="text/css">
             #xoops_theme_left_zone{
             <{if $left_separate=='1'}>
@@ -274,6 +272,9 @@
 
 
         </style>
+
+        <!-- 載入bootstrap -->
+        <{includeq file="$xoops_rootpath/modules/tadtools/themes4_tpl/bootstrap_js.tpl"}>
     </head>
 
     <body>
@@ -285,7 +286,7 @@
                     <div class="col-sm"></div>
                     <div class="col-sm-<{if $logo_display_type=='all_full'}>12<{else}><{$container_width}><{/if}>">
                         <{assign var=mylogofile value=$xoops_rootpath$logo_path`$smarty.get.$logo_var`.$logo_ext}>
-                        <div id="logo-container-display" class="row <{if $logo_shadow=='1' and $logo_display_type=='not_full'}>xoops_content_shadow<{/if}>">
+                        <div id="logo-container-display" class="row <{if $logo_align}>d-flex <{$logo_align}><{/if}> <{if $logo_shadow=='1' and $logo_display_type=='not_full'}>xoops_content_shadow<{/if}>">
                             <{if $logo_auto==1 and $smarty.server.REQUEST_URI|strpos:$smarty.get.$logo_var!==false and $mylogofile|file_exists}>
                                 <a href="<{$xoops_url}>/index.php?<{$logo_var}>=<{$smarty.get.$logo_var}>"><img id="website_logo" src="<{$xoops_url}><{$logo_path}><{$smarty.get.$logo_var}>.<{$logo_ext}>" style="max-width: 100%;<{if $logo_position=="slide"}>position: absolute; z-index: 5; <{$logo_place}><{else}>position: relative; z-index:10;<{/if}>" alt="<{$xoops_sitename}>" title="<{$xoops_sitename}>" class="img-fluid"></a>
                             <{else}>
@@ -369,8 +370,6 @@
             </div>
         <{/if}>
 
-        <!-- 載入bootstrap -->
-        <{includeq file="$xoops_rootpath/modules/tadtools/themes4_tpl/bootstrap_js.tpl"}>
 
         <!-- 載入自訂js -->
         <{includeq file="$xoops_rootpath/modules/tadtools/themes4_tpl/my_js.tpl"}>

@@ -1,6 +1,6 @@
 <?php
-
 $i = 0;
+
 //外框是否套用 container
 $i++;
 $theme_config[$i]['name'] = "container_width";
@@ -8,7 +8,7 @@ $theme_config[$i]['text'] = TF_USE_CONTAINER_WIDTH;
 $theme_config[$i]['desc'] = TF_USE_CONTAINER_WIDTH_DESC;
 $theme_config[$i]['type'] = "radio";
 $theme_config[$i]['options'] = array(12 => 12, 11 => 11, 10 => 10, 9 => 9, 8 => 8);
-$theme_config[$i]['default'] = "10";
+$theme_config[$i]['default'] = "11";
 
 //內容區域顯示模式
 $i++;
@@ -26,7 +26,7 @@ $theme_config[$i]['name'] = "content_shadow";
 $theme_config[$i]['text'] = TF_CONTENT_SHADOW;
 $theme_config[$i]['desc'] = TF_CONTENT_SHADOW_DESC;
 $theme_config[$i]['type'] = "yesno";
-$theme_config[$i]['default'] = "0";
+$theme_config[$i]['default'] = "1";
 
 //左區域和主內容間是否加上分隔線
 $i++;

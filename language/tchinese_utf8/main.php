@@ -6,7 +6,7 @@ define('TF_SHOW_VAR_DESC', '佈景開發時，會顯示所有 tad_themes 提供�
 define('TF_FOOTER_STYLE', '頁尾內容樣式設定');
 define('TF_FOOTER_STYLE_DESC', '可使用CSS語法控制頁尾內容的外觀');
 define('TF_FONT_FAMILY', '主要字型設定');
-define('TF_FONT_FAMILY_DEFAULT', '"Helvetica Neue",Helvetica,Arial,"微軟正黑體",sans-serif');
+define('TF_FONT_FAMILY_DEFAULT', 'jf-openhuninn, Mamelon, mnyylti, HanWangWeBe, HanWangMingBlack, JasonHandwriting1-Regular, JasonHandwriting2-Regular, JasonHandwriting3-Regular');
 define('TF_FONT_FAMILY_DESC', '輸入字型名稱，有空白的部份需要用""包起來。如：' . TF_FONT_FAMILY_DEFAULT);
 define('TF_USE_SHADOW_LOGO', '陰影是否包含logo');
 define('TF_USE_SHADOW_LOGO_DESC', '當logo在滑動圖文之上時，是否仍要加上陰影？');
@@ -97,6 +97,11 @@ define('TF_LOGO_VAR', '自動配對變數名稱');
 define('TF_LOGO_VAR_DESC', '欲偵測的網址變數名稱，如：nsn');
 define('TF_LOGO_EXT', 'logo圖的副檔名');
 define('TF_LOGO_EXT_DESC', '例如 jpg 或 png');
+define('TF_LOGO_ALIGN', 'logo圖的位置');
+define('TF_LOGO_ALIGN_DESC', '僅適用於「置於頁面上」模式');
+define('TF_LOGO_ALIGN_L', '靠左');
+define('TF_LOGO_ALIGN_C', '置中');
+define('TF_LOGO_ALIGN_R', '靠右');
 
 define('TF_BG_IMG', '背景圖');
 define('TF_BG_COLOR', '背景顏色');
@@ -157,6 +162,3 @@ define('TF_SLIDE_MT', '上方距離');
 define('TF_SLIDE_MT_DESC', '滑動圖距離上方多少像素（px）');
 define('TF_SLIDE_MB', '下方距離');
 define('TF_SLIDE_MB_DESC', '下方距離下方多少像素（px）');
-
-define('TF_NAV_MARGIN_TOP', '上方鎖定時，主內容區要距離上方多遠');
-define('TF_NAV_MARGIN_TOP_DESC', '預設是 50（px），若覺得空太大，可自行縮小');

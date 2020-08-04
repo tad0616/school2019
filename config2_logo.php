@@ -1,9 +1,8 @@
 <?php
-$bg_file['repeat'] = array('repeat' => TF_BG_REPEAT_NORMAL, 'repeat-x' => TF_BG_REPEAT_X, 'repeat-y' => TF_BG_REPEAT_Y, 'no-repeat' => TF_BG_NO_REPEAT);
-$bg_file['position'] = array('left top' => TF_BG_POSITION_LT, 'left center' => TF_BG_POSITION_LC, 'left bottom' => TF_BG_POSITION_LB, 'right top' => TF_BG_POSITION_RT, 'right center' => TF_BG_POSITION_RC, 'right bottom' => TF_BG_POSITION_RB, 'center center' => TF_BG_POSITION_CC, 'center top' => TF_BG_POSITION_CT, 'center bottom' => TF_BG_POSITION_CB);
-$bg_file['size'] = array('auto' => TF_BG_SIZE_NONE, 'cover' => TF_BG_SIZE_COVER, 'contain' => TF_BG_SIZE_CONTAIN, '100%' => TF_BG_SIZE_FULL);
+require XOOPS_ROOT_PATH . '/themes/school2019/bg_config.php';
 
 $i = 0;
+
 //logo區域顯示模式
 $i++;
 $theme_config[$i]['name'] = "logo_display_type";
@@ -30,19 +29,19 @@ $theme_config[$i]['desc'] = TF_LOGO_BGCOLOR_DESC;
 $theme_config[$i]['type'] = "color";
 $theme_config[$i]['default'] = "transparent";
 
-//logo 底圖
+//logo 底圖1
 $i++;
 $theme_config[$i]['name'] = "logo_bg";
 $theme_config[$i]['text'] = TF_LOGO_BG1;
 $theme_config[$i]['desc'] = TF_LOGO_BG1_DESC;
 $theme_config[$i]['type'] = "bg_file";
-$theme_config[$i]['default'] = "config2_logo_bg_3_3.png";
+$theme_config[$i]['default'] = "";
 $theme_config[$i]['options'] = $bg_file;
 $theme_config[$i]['repeat'] = "no-repeat";
 $theme_config[$i]['position'] = "right top";
 $theme_config[$i]['size'] = "auto";
 
-//logo1 底圖
+//logo 底圖重複方式
 $i++;
 $theme_config[$i]['name'] = "logo_bg2";
 $theme_config[$i]['text'] = TF_LOGO_BG2;
@@ -85,3 +84,12 @@ $theme_config[$i]['text'] = TF_LOGO_EXT;
 $theme_config[$i]['desc'] = TF_LOGO_EXT_DESC;
 $theme_config[$i]['type'] = "text";
 $theme_config[$i]['default'] = "png";
+
+//logo 對齊
+$i++;
+$theme_config[$i]['name'] = "logo_align";
+$theme_config[$i]['text'] = TF_LOGO_ALIGN;
+$theme_config[$i]['desc'] = TF_LOGO_ALIGN_DESC;
+$theme_config[$i]['type'] = "radio";
+$theme_config[$i]['options'] = array('justify-content-start' => TF_LOGO_ALIGN_L, 'justify-content-center' => TF_LOGO_ALIGN_C, 'justify-content-end' => TF_LOGO_ALIGN_R);
+$theme_config[$i]['default'] = "";

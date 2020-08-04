@@ -1,5 +1,4 @@
 <?php
-
 $i = 0;
 
 //導覽列區域顯示模式
@@ -26,7 +25,7 @@ $theme_config[$i]['name'] = "nav_bg_opacity";
 $theme_config[$i]['text'] = TF_NAV_BG_OPACITY;
 $theme_config[$i]['desc'] = TF_NAV_BG_OPACITY_DESC;
 $theme_config[$i]['type'] = "text";
-$theme_config[$i]['default'] = "0.1";
+$theme_config[$i]['default'] = "1";
 
 //nav 圓角
 $i++;
@@ -42,12 +41,4 @@ $theme_config[$i]['name'] = "nav_margin";
 $theme_config[$i]['text'] = TF_NAV_MARGIN;
 $theme_config[$i]['desc'] = TF_NAV_MARGIN_DESC;
 $theme_config[$i]['type'] = "text";
-$theme_config[$i]['default'] = "15px 0px 0px 0px";
-
-//nav 間距
-$i++;
-$theme_config[$i]['name'] = "nav_margin_top";
-$theme_config[$i]['text'] = TF_NAV_MARGIN_TOP;
-$theme_config[$i]['desc'] = TF_NAV_MARGIN_TOP_DESC;
-$theme_config[$i]['type'] = "text";
-$theme_config[$i]['default'] = "40";
+$theme_config[$i]['default'] = "15px  auto";

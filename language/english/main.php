@@ -7,7 +7,7 @@ define('TF_SHOW_VAR_DESC', 'When the scene is developed, all the control variabl
 define('TF_FOOTER_STYLE', 'End of page content style setting');
 define('TF_FOOTER_STYLE_DESC', 'Use CSS syntax to control the appearance of the content at the end of the page');
 define('TF_FONT_FAMILY', 'Main font settings');
-define('TF_FONT_FAMILY_DEFAULT', '"Helvetica Neue", Helvetica, Arial, "Microsoft is black", sans-serif');
+define('TF_FONT_FAMILY_DEFAULT', 'jf-openhuninn, Mamelon, mnyylti, HanWangWeBe, HanWangMingBlack, JasonHandwriting1-Regular, JasonHandwriting2-Regular, JasonHandwriting3-Regular');
 define('TF_FONT_FAMILY_DESC', 'Enter the font name, the blank part needs to be wrapped with "". For example: ' . TF_FONT_FAMILY_DEFAULT);
 define('TF_USE_SHADOW_LOGO', 'Does the shadow contain logo');
 define('TF_USE_SHADOW_LOGO_DESC', 'When the logo is over the sliding image, do you still want to add a shadow?');
@@ -98,6 +98,11 @@ define('TF_LOGO_VAR', 'Automatically pair variable name');
 define('TF_LOGO_VAR_DESC', '');
 define('TF_LOGO_EXT', 'Figure extension name');
 define('TF_LOGO_EXT_DESC', '');
+define('TF_LOGO_ALIGN', 'Location of the logo');
+define('TF_LOGO_ALIGN_DESC', "Only for 'On Page' mode");
+define('TF_LOGO_ALIGN_L', 'Left');
+define('TF_LOGO_ALIGN_C', 'Center');
+define('TF_LOGO_ALIGN_R', 'right');
 
 define('TF_BG_IMG', 'background-image');
 define('TF_BG_COLOR', 'background-color');
@@ -156,6 +161,3 @@ define('TF_SLIDE_MT', 'Top distance');
 define('TF_SLIDE_MT_DESC', 'How many pixels (px) above the slide image');
 define('TF_SLIDE_MB', 'Below distance');
 define('TF_SLIDE_MB_DESC', 'How many pixels (px) from below');
-
-define('TF_NAV_MARGIN_TOP', 'How far above the main content area should be when the navigation bar is locked');
-define('TF_NAV_MARGIN_TOP_DESC', 'Default is 50(px), if you feel the space is too large, you can reduce it by yourself');
