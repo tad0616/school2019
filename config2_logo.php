@@ -9,8 +9,8 @@ $theme_config[$i]['name'] = "logo_display_type";
 $theme_config[$i]['text'] = TF_LOGO_DISPLAY_TYPE;
 $theme_config[$i]['desc'] = TF_LOGO_DISPLAY_TYPE_DESC;
 $theme_config[$i]['type'] = "selectpicker";
-$theme_config[$i]['options'] = array('not_full' => TF_DISPLAY_TYPE_NOT_FULL, 'bg_full' => TF_DISPLAY_TYPE_BG_FULL, 'all_full' => TF_DISPLAY_TYPE_ALL_FULL);
-$theme_config[$i]['images'] = array('not_full' => XOOPS_URL . '/modules/tad_themes/images/dt_not_full.png', 'bg_full' => XOOPS_URL . '/modules/tad_themes/images/dt_bg_full.png', 'all_full' => XOOPS_URL . '/modules/tad_themes/images/dt_all_full.png');
+$theme_config[$i]['options'] = ['not_full' => TF_DISPLAY_TYPE_NOT_FULL, 'bg_full' => TF_DISPLAY_TYPE_BG_FULL, 'all_full' => TF_DISPLAY_TYPE_ALL_FULL];
+$theme_config[$i]['images'] = ['not_full' => XOOPS_URL . '/modules/tad_themes/images/dt_not_full.png', 'bg_full' => XOOPS_URL . '/modules/tad_themes/images/dt_bg_full.png', 'all_full' => XOOPS_URL . '/modules/tad_themes/images/dt_all_full.png'];
 $theme_config[$i]['default'] = "not_full";
 
 //logo 是否套用陰影
@@ -91,5 +91,5 @@ $theme_config[$i]['name'] = "logo_align";
 $theme_config[$i]['text'] = TF_LOGO_ALIGN;
 $theme_config[$i]['desc'] = TF_LOGO_ALIGN_DESC;
 $theme_config[$i]['type'] = "radio";
-$theme_config[$i]['options'] = array('justify-content-start' => TF_LOGO_ALIGN_L, 'justify-content-center' => TF_LOGO_ALIGN_C, 'justify-content-end' => TF_LOGO_ALIGN_R);
+$theme_config[$i]['options'] = ['justify-content-start' => TF_LOGO_ALIGN_L, 'justify-content-center' => TF_LOGO_ALIGN_C, 'justify-content-end' => TF_LOGO_ALIGN_R];
 $theme_config[$i]['default'] = "";
