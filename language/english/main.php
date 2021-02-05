@@ -88,7 +88,7 @@ define('TF_CONTENT_DISPLAY_TYPE_DESC', 'How to render the content area');
 define('TF_CONTENT_SHADOW', 'Do you want to apply shadows in the content area');
 define('TF_CONTENT_SHADOW_DESC', 'If "Yes" will add a shadow around the content area');
 define('TF_USE_CONTAINER_WIDTH', 'Overall page display width');
-define('TF_USE_CONTAINER_WIDTH_DESC', '12 is full version, will be left blank after 12 or so');
+define('TF_USE_CONTAINER_WIDTH_DESC', 'e.g.: 1430px or 85%');
 
 define('TF_LOGO_AUTO', 'Do you want to use automatic pairing');
 define('TF_LOGO_AUTO_DESC', '');

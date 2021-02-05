@@ -6,9 +6,8 @@ $i++;
 $theme_config[$i]['name'] = "container_width";
 $theme_config[$i]['text'] = TF_USE_CONTAINER_WIDTH;
 $theme_config[$i]['desc'] = TF_USE_CONTAINER_WIDTH_DESC;
-$theme_config[$i]['type'] = "radio";
-$theme_config[$i]['options'] = [12 => 12, 11 => 11, 10 => 10, 9 => 9, 8 => 8];
-$theme_config[$i]['default'] = "11";
+$theme_config[$i]['type'] = "text";
+$theme_config[$i]['default'] = "85%";
 
 //內容區域顯示模式
 $i++;

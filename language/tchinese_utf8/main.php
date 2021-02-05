@@ -87,7 +87,7 @@ define('TF_CONTENT_DISPLAY_TYPE_DESC', '以何種方式來呈現內容區');
 define('TF_CONTENT_SHADOW', '內容區域是否要套用陰影');
 define('TF_CONTENT_SHADOW_DESC', '若「是」會在內容區域周圍加上陰影');
 define('TF_USE_CONTAINER_WIDTH', '整體頁面顯示寬度');
-define('TF_USE_CONTAINER_WIDTH_DESC', '12即滿版，12以下左右會自動留空');
+define('TF_USE_CONTAINER_WIDTH_DESC', '如： 1430px 或 85%');
 
 define('TF_LOGO_AUTO', '是否使用自動配對');
 define('TF_LOGO_AUTO_DESC', '讓系統自動偵測網址某變數來自動切換 logo');
