@@ -203,12 +203,6 @@
             <{/if}>
 
 
-            <{if $nav_margin>0}>
-                #nav-container {
-                    margin: <{$nav_margin}>;
-                }
-            <{/if}>
-
             <{if $nav_shadow=='1'}>
                 <{if $nav_display_type=='not_full'}>
                     #main-nav {
@@ -314,8 +308,11 @@
         <{if $slide_width > 0 }>
             <div class="container" id="slide-container" <{if $slide_display_type!='all_full'}>style="max-width: <{$container_width}>;"<{/if}>>
                 <div id="xoops_theme_slide" class="row  <{if $slide_shadow=='1' and $slide_display_type=='not_full'}>xoops_content_shadow<{/if}>">
-                    <div id="slide-container-display" style="width:100%;">
+                    <div id="slide-container-display" style="width:100%; position:relative; z-index:1;">
                         <{includeq file="$xoops_rootpath/modules/tadtools/themes4_tpl/slideshow_responsive.tpl"}>
+                        <{if $slide_mask}>
+                            <img src="<{$slide_mask}>" alt="mask" class="img-fluid" style="width:100%; position:absolute; z-index:2; left:0px; top:0px;">
+                        <{/if}>
                     </div>
                 </div>
             </div>

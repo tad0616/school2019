@@ -154,10 +154,12 @@ define('TF_NAV_BG_OPACITY', 'Navigation bar area background color transparency')
 define('TF_NAV_BG_OPACITY_DESC', 'Please set a decimal value between 0 (transparent) to 1');
 define('TF_NAV_BORDER_RADIUS', 'Nav border-radius set');
 define('TF_NAV_BORDER_RADIUS_DESC', 'Only works if \"' . TF_DISPLAY_TYPE_NOT_FULL . '\"');
-define('TF_NAV_MARGIN', 'Offline navigation margin setting');
-define('TF_NAV_MARGIN_DESC', 'You can set the spacing for the top right bottom left, such as "8px 0px 8px 0px"');
+define('TF_NAV_MARGIN', 'Set the spacing between the top and bottom of the navigation column');
+define('TF_NAV_MARGIN_DESC', 'Set the spacing for top-right-bottom-left, such as "15px", or blank if no spacing is needed');
 
 define('TF_SLIDE_MT', 'Top distance');
 define('TF_SLIDE_MT_DESC', 'How many pixels (px) above the slide image');
 define('TF_SLIDE_MB', 'Below distance');
 define('TF_SLIDE_MB_DESC', 'How many pixels (px) from below');
+define('TF_SLIDE_MASK', 'Sliding image mask');
+define('TF_SLIDE_MASK_DESC', 'Mask can be used to add a frame to the slide image');

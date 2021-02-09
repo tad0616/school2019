@@ -58,3 +58,11 @@ $theme_config[$i]['text'] = TF_SLIDE_MB;
 $theme_config[$i]['desc'] = TF_SLIDE_MB_DESC;
 $theme_config[$i]['type'] = "text";
 $theme_config[$i]['default'] = "0";
+
+//slide 圖片遮罩
+$i++;
+$theme_config[$i]['name'] = "slide_mask";
+$theme_config[$i]['text'] = TF_SLIDE_MASK;
+$theme_config[$i]['desc'] = TF_SLIDE_MASK_DESC;
+$theme_config[$i]['type'] = "file";
+$theme_config[$i]['default'] = "";
