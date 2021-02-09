@@ -287,7 +287,7 @@
         <{if $margin_top}><div style="margin-top: <{$margin_top}>px;"></div><{/if}>
         <!-- logo區域 -->
         <{if $logo_img and $logo_position=="page"}>
-            <div class="container" id="logo-container" <{if $logo_display_type!='all_full'}>style="max-width: <{$container_width}>;"<{/if}>>
+            <div class="container" id="logo-container" style="max-width: <{if $logo_display_type!='all_full'}><{$container_width}><{else}>100%<{/if}>;">
                 <{assign var=mylogofile value=$xoops_rootpath$logo_path`$smarty.get.$logo_var`.$logo_ext}>
                 <div id="logo-container-display" class="row <{if $logo_align}>d-flex <{$logo_align}><{/if}> <{if $logo_shadow=='1' and $logo_display_type=='not_full'}>xoops_content_shadow<{/if}>">
                     <{if $logo_auto==1 and $smarty.server.REQUEST_URI|strpos:$smarty.get.$logo_var!==false and $mylogofile|file_exists}>
@@ -306,12 +306,14 @@
 
         <!-- 滑動圖區域 -->
         <{if $slide_width > 0 }>
-            <div class="container" id="slide-container" <{if $slide_display_type!='all_full'}>style="max-width: <{$container_width}>;"<{/if}>>
+            <div class="container" id="slide-container" style="max-width: <{if $slide_display_type!='all_full'}><{$container_width}><{else}>100%<{/if}>;">
                 <div id="xoops_theme_slide" class="row  <{if $slide_shadow=='1' and $slide_display_type=='not_full'}>xoops_content_shadow<{/if}>">
                     <div id="slide-container-display" style="width:100%; position:relative; z-index:1;">
                         <{includeq file="$xoops_rootpath/modules/tadtools/themes4_tpl/slideshow_responsive.tpl"}>
                         <{if $slide_mask}>
                             <img src="<{$slide_mask}>" alt="mask" class="img-fluid" style="width:100%; position:absolute; z-index:2; left:0px; top:0px;">
+                        <{elseif $slide_def_mask}>
+                            <img src="<{$xoops_url}>/uploads/tad_themes/school2019/mask/<{$slide_def_mask}>.svg" alt="mask" class="img-fluid" style="width:100%; position:absolute; z-index:2; left:0px; top:0px;">
                         <{/if}>
                     </div>
                 </div>
@@ -324,7 +326,7 @@
         <{/if}>
 
         <!-- 主內容區域 -->
-        <div class="container" id="content-container" <{if $content_display_type!='all_full'}>style="max-width: <{$container_width}>;"<{/if}>>
+        <div class="container" id="content-container" style="max-width: <{if $content_display_type!='all_full'}><{$container_width}><{else}>100%<{/if}>;">
             <div id="xoops_theme_content" class="row <{if $content_shadow=='1' and $content_display_type=='not_full'}>xoops_content_shadow<{/if}>">
                 <div id="content-container-display" style="<{$content_zone}>" class="col-sm-12">
                     <!-- 載入布局 -->
@@ -337,7 +339,7 @@
         </div>
 
         <!-- 頁尾區域 -->
-        <div class="container" id="footer-container" <{if $footer_display_type!='all_full'}>style="max-width: <{$container_width}>;"<{/if}>>
+        <div class="container" id="footer-container" style="max-width: <{if $footer_display_type!='all_full'}><{$container_width}><{else}>100%<{/if}>;">
             <div id="xoops_theme_footer" class="row <{if $footer_shadow=='1' and $footer_display_type=='not_full'}>xoops_content_shadow<{/if}>">
                 <div id="footer-container-display" class="col-sm-12">
                     <{if $xoops_isadmin}><a href="<{$xoops_url}>/modules/system/admin.php?fct=preferences&op=show&confcat_id=3" class="block_config"></a><{/if}>

@@ -163,5 +163,11 @@ define('TF_SLIDE_MT_DESC', '滑動圖距離上方多少像素（px）');
 define('TF_SLIDE_MB', '下方距離');
 define('TF_SLIDE_MB_DESC', '下方距離下方多少像素（px）');
 
-define('TF_SLIDE_MASK', '滑動圖遮罩');
+define('TF_SLIDE_MASK', '自訂滑動圖外框');
 define('TF_SLIDE_MASK_DESC', '可以利用遮罩圖替滑動圖加上外框');
+
+define('TF_SLIDE_DEF_MASK', '純色背景滑動圖外框');
+define('TF_SLIDE_DEF_MASK_DESC', '會自動根據底色來產生滑動圖外框（自訂滑動圖外框需為「無」）');
+define('TF_SLIDE_DEF_MASK0', '無');
+define('TF_SLIDE_DEF_MASK1', '外框一');
+define('TF_SLIDE_DEF_MASK2', '外框二');
