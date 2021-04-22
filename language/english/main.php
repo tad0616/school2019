@@ -21,6 +21,8 @@ define('TF_SPARATE_STYLE', 'The style of the left and right area dividers');
 define('TF_SPARATE_STYLE_DESC', 'The style of the left and right area dividers');
 define('TF_MY_CODE', 'CSS or JS syntax to add to the end of the page');
 define('TF_MY_CODE_DESC', 'Can load CSS or JS by yourself');
+define('TF_OG_FILE', 'Site Thumbnails');
+define('TF_OG_FILE_DESC', 'Thumbnails displayed when sharing URLs on fb or line(width at least 200px)');
 
 define('TF_LOGO_DISPLAY_TYPE', 'logo area display mode');
 define('TF_LOGO_DISPLAY_TYPE_DESC', 'How to render the logo area');

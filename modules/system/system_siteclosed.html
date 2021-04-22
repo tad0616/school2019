@@ -58,11 +58,18 @@
     <body>
         <!-- logo區域 -->
         <{if $logo_img and $logo_position=="page"}>
-            <div class="container" id="logo-container" style="max-width: <{if $logo_display_type!='all_full'}><{$container_width}><{else}>100%<{/if}>;">
-                <div id="logo-container-display" class="row <{if $logo_shadow=='1' and $logo_display_type=='not_full'}>xoops_content_shadow<{/if}>">
-                    <{includeq file="$xoops_rootpath/modules/tadtools/themes4_tpl/logo.tpl"}>
+            <div id="logo-container">
+                <div class="container" id="logo-container" style="max-width: <{if $logo_display_type!='all_full'}><{$container_width}><{else}>100%<{/if}>;">
+                    <div id="logo-container-display" class="row <{if $logo_shadow=='1' and $logo_display_type=='not_full'}>xoops_content_shadow<{/if}>">
+                        <{includeq file="$xoops_rootpath/modules/tadtools/themes4_tpl/logo.tpl"}>
+                    </div>
                 </div>
             </div>
+        <{/if}>
+
+        <!-- 導覽列區域 -->
+        <{if $navbar_pos=='sticky-top'}>
+            <{includeq file="$xoops_rootpath/themes/school2019/tpl/nav-container.tpl"}>
         <{/if}>
 
         <!-- 滑動圖區域 -->
@@ -80,15 +87,11 @@
         <{/if}>
 
         <!-- 導覽列區域 -->
-        <{if $navbar_pos!="not-use"}>
-            <div class="container" id="nav-container" style="max-width: <{if $nav_display_type!='all_full'}><{$container_width}><{else}>100%<{/if}>;">
-                <div id="xoops_theme_nav" class="row <{if $nav_shadow=='1' and $nav_display_type=='not_full'}>xoops_content_shadow<{/if}>">
-                    <div id="nav-container-display" style="width:100%;">
-                        <{includeq file="$xoops_rootpath/modules/tadtools/themes4_tpl/navbar.tpl"}>
-                    </div>
-                </div>
-            </div>
+        <{if $navbar_pos=='default'}>
+            <{includeq file="$xoops_rootpath/themes/school2019/tpl/nav-container.tpl"}>
         <{/if}>
+
+
 
         <!-- 主內容區域 -->
         <div class="container" id="content-container" style="max-width: <{if $content_display_type!='all_full'}><{$container_width}><{else}>100%<{/if}>;">

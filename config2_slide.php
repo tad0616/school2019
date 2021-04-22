@@ -79,12 +79,15 @@ $theme_config[$i]['default'] = "";
 $theme_config[$i]['callback']['func_name'] = "change_svg_color";
 $theme_config[$i]['callback']['func_parm'][0]['type'] = "config2";
 $theme_config[$i]['callback']['func_parm'][0]['col'] = "slide_def_mask";
-$theme_config[$i]['callback']['func_parm'][1]['type'] = "config";
-$theme_config[$i]['callback']['func_parm'][1]['col'] = "bg_color";
+$theme_config[$i]['callback']['func_parm'][1]['type'] = "config2";
+$theme_config[$i]['callback']['func_parm'][1]['col'] = "slide_bgcolor";
+$theme_config[$i]['callback']['func_parm'][2]['type'] = "config";
+$theme_config[$i]['callback']['func_parm'][2]['col'] = "bg_color";
 $theme_config[$i]['callback']['func_code'] = "
 function change_svg_color(\$parm=[]){
     \$svg = file_get_contents(\"" . XOOPS_ROOT_PATH . "/themes/school2019/images/mask/{\$parm['slide_def_mask']}.svg\");
-    \$svg = str_replace('#007fa0', \$parm['bg_color'], \$svg);
+    \$new_color = \$parm['slide_bgcolor']=='transparent'?\$parm['bg_color']:\$parm['slide_bgcolor'];
+    \$svg = str_replace('#007fa0', \$new_color, \$svg);
     if(!is_dir('" . XOOPS_ROOT_PATH . "/uploads/tad_themes/school2019/mask')){
         mkdir('" . XOOPS_ROOT_PATH . "/uploads/tad_themes/school2019/mask');
     }

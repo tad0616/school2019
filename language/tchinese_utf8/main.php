@@ -20,6 +20,8 @@ define('TF_SPARATE_STYLE', '左右區域分隔線的樣式');
 define('TF_SPARATE_STYLE_DESC', '左右區域分隔線的樣式');
 define('TF_MY_CODE', '欲加入頁尾的CSS或JS語法');
 define('TF_MY_CODE_DESC', '可自行載入CSS或JS');
+define('TF_OG_FILE', '網站縮圖');
+define('TF_OG_FILE_DESC', '在fb或line分享網址時，會顯示的縮圖（寬高至少 200px）');
 
 define('TF_LOGO_DISPLAY_TYPE', 'logo區域顯示模式');
 define('TF_LOGO_DISPLAY_TYPE_DESC', '以何種方式來呈現logo區域');
