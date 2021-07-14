@@ -283,7 +283,7 @@
                 <div class="container" style="max-width: <{if $slide_display_type=='all_full'}>100%<{else}><{$container_width}><{/if}>;">
                     <div id="xoops_theme_slide" class="row  <{if $slide_shadow=='1' and $slide_display_type=='not_full'}>xoops_content_shadow<{/if}>">
                         <div id="slide-container-display" style="width:100%; position:relative; z-index:1;">
-                            <{includeq file="$xoops_rootpath/modules/tadtools/themes4_tpl/slideshow_responsive.tpl"}>
+                            <{includeq file="$xoops_rootpath/themes/school2019/tpl/slideshow_responsive.tpl"}>
                             <{if $slide_mask}>
                                 <img src="<{$slide_mask}>" alt="mask" class="img-fluid" style="width:100%; position:absolute; z-index:2; left:0px; top:0px;">
                             <{elseif $slide_def_mask}>
