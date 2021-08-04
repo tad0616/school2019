@@ -83,14 +83,4 @@ $theme_config[$i]['callback']['func_parm'][1]['type'] = "config2";
 $theme_config[$i]['callback']['func_parm'][1]['col'] = "slide_bgcolor";
 $theme_config[$i]['callback']['func_parm'][2]['type'] = "config";
 $theme_config[$i]['callback']['func_parm'][2]['col'] = "bg_color";
-$theme_config[$i]['callback']['func_code'] = "
-function change_svg_color(\$parm=[]){
-    \$svg = file_get_contents(\"" . XOOPS_ROOT_PATH . "/themes/school2019/images/mask/{\$parm['slide_def_mask']}.svg\");
-    \$new_color = \$parm['slide_bgcolor']=='transparent'?\$parm['bg_color']:\$parm['slide_bgcolor'];
-    \$svg = str_replace('#007fa0', \$new_color, \$svg);
-    if(!is_dir('" . XOOPS_ROOT_PATH . "/uploads/tad_themes/school2019/mask')){
-        mkdir('" . XOOPS_ROOT_PATH . "/uploads/tad_themes/school2019/mask');
-    }
-    file_put_contents(\"" . XOOPS_ROOT_PATH . "/uploads/tad_themes/school2019/mask/{\$parm['slide_def_mask']}.svg\", \$svg);
-}
-";
+$theme_config[$i]['callback']['func_code'] = "function change_svg_color(\$parm=[]){\$svg = file_get_contents(\"" . XOOPS_ROOT_PATH . "/themes/school2019/images/mask/{\$parm['slide_def_mask']}.svg\");\$new_color = \$parm['slide_bgcolor']=='transparent'?\$parm['bg_color']:\$parm['slide_bgcolor'];\$svg = str_replace('#007fa0', \$new_color, \$svg);if(!is_dir('" . XOOPS_ROOT_PATH . "/uploads/tad_themes/school2019/mask')){mkdir('" . XOOPS_ROOT_PATH . "/uploads/tad_themes/school2019/mask');}file_put_contents(\"" . XOOPS_ROOT_PATH . "/uploads/tad_themes/school2019/mask/{\$parm['slide_def_mask']}.svg\", \$svg);}";

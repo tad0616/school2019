@@ -128,7 +128,7 @@ div.comText {
 }
 
 div.comText img {
-  max-width: 500px;
-  width: expression(this.width > 500 ? "500px": this.width);
+  max-width: 50%;
+  width: expression(this.width > 500 ? "50%": this.width);
   overflow: hidden;
 }
