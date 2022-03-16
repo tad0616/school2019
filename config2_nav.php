@@ -42,3 +42,11 @@ $theme_config[$i]['text'] = TF_NAV_MARGIN;
 $theme_config[$i]['desc'] = TF_NAV_MARGIN_DESC;
 $theme_config[$i]['type'] = "text";
 $theme_config[$i]['default'] = "15px  auto";
+
+//是否點擊才出現子選單
+$i++;
+$theme_config[$i]['name'] = "no_mouse_over";
+$theme_config[$i]['text'] = TF_NAV_NO_MOUSE_OVER;
+$theme_config[$i]['desc'] = TF_NAV_NO_MOUSE_OVER_DESC;
+$theme_config[$i]['type'] = "yesno";
+$theme_config[$i]['default'] = "0";

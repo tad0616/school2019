@@ -95,7 +95,8 @@ $theme_config[$i]['name'] = "my_code";
 $theme_config[$i]['text'] = TF_MY_CODE;
 $theme_config[$i]['desc'] = TF_MY_CODE_DESC;
 $theme_config[$i]['type'] = "textarea";
-$theme_config[$i]['default'] = "";
+$theme_config[$i]['default'] = "<link href=\"https://schoolweb.tn.edu.tw/uploads/fonts/woff2.css\" rel=\"stylesheet\" media=\"all\">
+<link href=\"https://fonts.googleapis.com/css?family=Noto+Sans+TC|Noto+Serif+TC&display=swap\" rel=\"stylesheet\" media=\"all\">";
 
 //網站縮圖
 $i++;

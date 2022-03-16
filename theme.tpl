@@ -248,6 +248,39 @@
                 <{if $slide_mt}>margin-top: <{$slide_mt}>px;<{/if}>
                 <{if $slide_mb}>margin-bottom: <{$slide_mb}>px;<{/if}>
             }
+
+            #logo-container>.container,
+            #slide-container>.container,
+            #content-container,
+            #footer-container
+            {
+                max-width: 100%;
+            }
+
+            @media (min-width: 768px) {
+
+                #logo-container>.container
+                {
+                    max-width: <{if $logo_display_type=='all_full'}>100%<{else}><{$container_width}><{/if}>;
+                }
+
+                #slide-container>.container
+                {
+                    max-width: <{if $slide_display_type=='all_full'}>100%<{else}><{$container_width}><{/if}>;
+                }
+
+                #content-container
+                {
+                    max-width: <{if $content_display_type!='all_full'}><{$container_width}><{else}>100%<{/if}>;
+                }
+
+                #footer-container
+                {
+                    max-width: <{if $footer_display_type!='all_full'}><{$container_width}><{else}>100%<{/if}>;
+                }
+            }
+
+
         </style>
 
         <!-- 載入bootstrap -->
@@ -259,7 +292,7 @@
         <!-- logo區域 -->
         <{if $logo_img and $logo_position=="page"}>
             <div id="logo-container">
-                <div class="container" style="max-width: <{if $logo_display_type=='all_full'}>100%<{else}><{$container_width}><{/if}>;">
+                <div class="container">
                     <{assign var=mylogofile value=$xoops_rootpath$logo_path`$smarty.get.$logo_var`.$logo_ext}>
                     <div id="logo-container-display" class="row <{if $logo_align}>d-flex <{$logo_align}><{/if}> <{if $logo_shadow=='1' and $logo_display_type=='not_full'}>xoops_content_shadow<{/if}>">
                         <{if $logo_auto==1 and $smarty.server.REQUEST_URI|strpos:$smarty.get.$logo_var!==false and $mylogofile|file_exists}>
@@ -278,9 +311,9 @@
         <{/if}>
 
         <!-- 滑動圖區域 -->
-        <{if $slide_width > 0 }>
+        <{if $use_slide }>
             <div id="slide-container">
-                <div class="container" style="max-width: <{if $slide_display_type=='all_full'}>100%<{else}><{$container_width}><{/if}>;">
+                <div class="container">
                     <div id="xoops_theme_slide" class="row  <{if $slide_shadow=='1' and $slide_display_type=='not_full'}>xoops_content_shadow<{/if}>">
                         <div id="slide-container-display" style="width:100%; position:relative; z-index:1;">
                             <{includeq file="$xoops_rootpath/themes/school2019/tpl/slideshow_responsive.tpl"}>
@@ -301,7 +334,7 @@
         <{/if}>
 
         <!-- 主內容區域 -->
-        <div class="container" id="content-container" style="max-width: <{if $content_display_type!='all_full'}><{$container_width}><{else}>100%<{/if}>;">
+        <div class="container" id="content-container">
             <div id="xoops_theme_content" class="row <{if $content_shadow=='1' and $content_display_type=='not_full'}>xoops_content_shadow<{/if}>">
                 <div id="content-container-display" style="<{$content_zone}>" class="col-sm-12">
                     <!-- 載入布局 -->
@@ -314,7 +347,7 @@
         </div>
 
         <!-- 頁尾區域 -->
-        <div class="container" id="footer-container" style="max-width: <{if $footer_display_type!='all_full'}><{$container_width}><{else}>100%<{/if}>;">
+        <div class="container" id="footer-container">
             <div id="xoops_theme_footer" class="row <{if $footer_shadow=='1' and $footer_display_type=='not_full'}>xoops_content_shadow<{/if}>">
                 <div id="footer-container-display" class="col-sm-12">
                     <{if $xoops_isadmin}><a href="<{$xoops_url}>/modules/system/admin.php?fct=preferences&op=show&confcat_id=3" class="block_config"></a><{/if}>

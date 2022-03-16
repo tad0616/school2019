@@ -19,7 +19,8 @@ define('TF_RIGHT_SPARATE_DESC', '右區域和主內容間是否加上分隔線')
 define('TF_SPARATE_STYLE', '左右區域分隔線的樣式');
 define('TF_SPARATE_STYLE_DESC', '左右區域分隔線的樣式');
 define('TF_MY_CODE', '欲加入頁尾的CSS或JS語法');
-define('TF_MY_CODE_DESC', '可自行載入CSS或JS');
+define('TF_MY_CODE_DESC', '可自行載入CSS或JS，例如：<link href="https://schoolweb.tn.edu.tw/uploads/fonts/woff2.css" rel="stylesheet" media="all">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC|Noto+Serif+TC&display=swap" rel="stylesheet" media="all">');
 define('TF_OG_FILE', '網站縮圖');
 define('TF_OG_FILE_DESC', '在fb或line分享網址時，會顯示的縮圖（寬高至少 200px）');
 
@@ -173,3 +174,6 @@ define('TF_SLIDE_DEF_MASK_DESC', '會自動根據底色來產生滑動圖外框�
 define('TF_SLIDE_DEF_MASK0', '無');
 define('TF_SLIDE_DEF_MASK1', '外框一');
 define('TF_SLIDE_DEF_MASK2', '外框二');
+
+define('TF_NAV_NO_MOUSE_OVER', '是否點擊才出現子選單');
+define('TF_NAV_NO_MOUSE_OVER_DESC', '預設為滑鼠停留就出現，選是就必須點擊才會出現');

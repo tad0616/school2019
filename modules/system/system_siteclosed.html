@@ -73,7 +73,7 @@
         <{/if}>
 
         <!-- 滑動圖區域 -->
-        <{if $slide_width > 0 }>
+        <{if $use_slide }>
             <div class="container" id="slide-container" style="max-width: <{if $slide_display_type!='all_full'}><{$container_width}><{else}>100%<{/if}>;">
                 <div id="xoops_theme_slide" class="row  <{if $slide_shadow=='1' and $slide_display_type=='not_full'}>xoops_content_shadow<{/if}>">
                     <div id="slide-container-display" style="width:100%; position:relative; z-index:1;">
