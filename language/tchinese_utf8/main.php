@@ -6,7 +6,7 @@ define('TF_SHOW_VAR_DESC', '佈景開發時，會顯示所有 tad_themes 提供�
 define('TF_FOOTER_STYLE', '頁尾內容樣式設定');
 define('TF_FOOTER_STYLE_DESC', '可使用CSS語法控制頁尾內容的外觀');
 define('TF_FONT_FAMILY', '主要字型設定');
-define('TF_FONT_FAMILY_DEFAULT', 'jf-openhuninn, Mamelon, mnyylti, HanWangWeBe, HanWangMingBlack, JasonHandwriting1-Regular, JasonHandwriting2-Regular, JasonHandwriting3-Regular');
+define('TF_FONT_FAMILY_DESC', '輸入字型名稱，有空白的部份需要用""包起來。完整可用字型請參考：<a href="' . XOOPS_URL . '/modules/tadtools/fonts.php" target="_blank">' . XOOPS_URL . '/modules/tadtools/fonts.php</a>');
 define('TF_FONT_FAMILY_DESC', '輸入字型名稱，有空白的部份需要用""包起來。如：' . TF_FONT_FAMILY_DEFAULT);
 define('TF_USE_SHADOW_LOGO', '陰影是否包含logo');
 define('TF_USE_SHADOW_LOGO_DESC', '當logo在滑動圖文之上時，是否仍要加上陰影？');
@@ -19,8 +19,8 @@ define('TF_RIGHT_SPARATE_DESC', '右區域和主內容間是否加上分隔線')
 define('TF_SPARATE_STYLE', '左右區域分隔線的樣式');
 define('TF_SPARATE_STYLE_DESC', '左右區域分隔線的樣式');
 define('TF_MY_CODE', '欲加入頁尾的CSS或JS語法');
-define('TF_MY_CODE_DESC', '可自行載入CSS或JS，例如：<link href="https://schoolweb.tn.edu.tw/uploads/fonts/woff2.css" rel="stylesheet" media="all">
-<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC|Noto+Serif+TC&display=swap" rel="stylesheet" media="all">');
+define('TF_MY_CODE_DESC', '可自行載入CSS或JS，例如：&lt;link href="https://schoolweb.tn.edu.tw/uploads/fonts/woff2.css" rel="stylesheet" media="all"&gt;
+&lt;link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC|Noto+Serif+TC&display=swap" rel="stylesheet" media="all"&gt;');
 define('TF_OG_FILE', '網站縮圖');
 define('TF_OG_FILE_DESC', '在fb或line分享網址時，會顯示的縮圖（寬高至少 200px）');
 

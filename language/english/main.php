@@ -7,7 +7,7 @@ define('TF_SHOW_VAR_DESC', 'When the scene is developed, all the control variabl
 define('TF_FOOTER_STYLE', 'End of page content style setting');
 define('TF_FOOTER_STYLE_DESC', 'Use CSS syntax to control the appearance of the content at the end of the page');
 define('TF_FONT_FAMILY', 'Main font settings');
-define('TF_FONT_FAMILY_DEFAULT', 'jf-openhuninn, Mamelon, mnyylti, HanWangWeBe, HanWangMingBlack, JasonHandwriting1-Regular, JasonHandwriting2-Regular, JasonHandwriting3-Regular');
+define('TF_FONT_FAMILY_DESC', 'Enter the font name, and wrap the blank part with "". For a complete list of available fonts, please refer to <a href="' . XOOPS_URL . '/modules/tadtools/fonts.php" target="_blank">' . XOOPS_URL . '/modules/tadtools/fonts.php</a>');
 define('TF_FONT_FAMILY_DESC', 'Enter the font name, the blank part needs to be wrapped with "". For example: ' . TF_FONT_FAMILY_DEFAULT);
 define('TF_USE_SHADOW_LOGO', 'Does the shadow contain logo');
 define('TF_USE_SHADOW_LOGO_DESC', 'When the logo is over the sliding image, do you still want to add a shadow?');
@@ -20,8 +20,8 @@ define('TF_RIGHT_SPARATE_DESC', 'Is there a dividing line between the right area
 define('TF_SPARATE_STYLE', 'The style of the left and right area dividers');
 define('TF_SPARATE_STYLE_DESC', 'The style of the left and right area dividers');
 define('TF_MY_CODE', 'CSS or JS syntax to add to the end of the page');
-define('TF_MY_CODE_DESC', 'Can load CSS or JS by yourself, ex: <link href="https://schoolweb.tn.edu.tw/uploads/fonts/woff2.css" rel="stylesheet" media="all">
-<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC|Noto+Serif+TC&display=swap" rel="stylesheet" media="all">');
+define('TF_MY_CODE_DESC', 'Can load CSS or JS by yourself, ex: &lt;link href="https://schoolweb.tn.edu.tw/uploads/fonts/woff2.css" rel="stylesheet" media="all"&gt;
+&lt;link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC|Noto+Serif+TC&display=swap" rel="stylesheet" media="all"&gt;');
 define('TF_OG_FILE', 'Site Thumbnails');
 define('TF_OG_FILE_DESC', 'Thumbnails displayed when sharing URLs on fb or line(width at least 200px)');
 
