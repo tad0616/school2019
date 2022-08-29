@@ -1,124 +1,143 @@
 @import url("block.css");
 
 body {
-    padding-top: 0px;
+  padding-top: 0px;
 }
 
 p {
-    line-height: 180%;
+  line-height: 180%;
 }
 
 .navbar {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 /* 用來製作網頁背景效果，僅html模式有效果 */
 #xoops_theme_container {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 /* 頁首 */
-#xoops_theme_header {}
+#xoops_theme_header {
+}
 
 /* 內容區（包含各區域） */
-#xoops_theme_content_zone {}
+#xoops_theme_content_zone {
+}
 
 /* 左區域 */
-#xoops_theme_left_zone {}
+#xoops_theme_left_zone {
+}
 
 /* 主頁面區 */
-#xoops_theme_center {}
+#xoops_theme_center {
+}
 
 /*主內容區*/
-#xoops_contents {}
+#xoops_contents {
+  margin-top: 30px;
+}
+
+#content-container-display {
+  padding-top: 10px;
+}
 
 /* 右區域 */
-#xoops_theme_right_zone {}
+#xoops_theme_right_zone {
+}
 
 /* 頁尾 */
 #xoops_theme_footer {
-    background-position: center center;
+  background-position: center center;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 a.block_config {
-    position: absolute;
-    z-index: 1;
-    top: 6px;
-    right: 10px;
-    display: block;
-    float: right;
-    width: 16px;
-    height: 16px;
-    background-image: url(../img/block_config.png);
+  position: absolute;
+  z-index: 1;
+  top: 6px;
+  right: 10px;
+  display: block;
+  float: right;
+  width: 16px;
+  height: 16px;
+  background-image: url(../img/block_config.png);
 }
 
 a.block_config:hover {
-    background-image: url(../img/block_config_hover.png);
+  background-image: url(../img/block_config_hover.png);
 }
 
 .xoops_content_shadow {
-    -moz-box-shadow: :0px 0px 5px 1px #333;
-    -webkit-box-shadow: :0px 0px 5px 1px #333;
-    box-shadow: 0px 0px 5px 1px #333;
+  box-shadow: 0px 0px 5px 1px #333;
 }
 
 .form-control-static {
-    min-height: 34px;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    margin-bottom: 0;
+  min-height: 34px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-bottom: 0;
 }
 
-.btn-group-xs>.btn,
+.btn-group-xs > .btn,
 .btn-xs {
-    padding: 0.35rem 0.3rem;
-    font-size: 0.725rem;
-    line-height: 0.5;
-    border-radius: 0.2rem;
+  padding: 0.35rem 0.3rem;
+  font-size: 0.725rem;
+  line-height: 0.5;
+  border-radius: 0.2rem;
 }
 
 blockquote {
-    position: relative;
-    text-align: left;
-    padding: 1.2em 0 2em 1.2em;
-    border: none;
-    margin: 20px auto 20px;
-    width:100%;
-    display: block;
-    font-size: 1.5rem;
-    font-family: 'HanWangWeBe';
+  position: relative;
+  text-align: left;
+  padding: 1.2em 0 2em 1.2em;
+  border: none;
+  margin: 20px auto 20px;
+  width: 100%;
+  display: block;
+  font-size: 1.5rem;
+  font-family: "HanWangWeBe";
 }
 
 blockquote:after {
-    content: "";
-    display: block;
-    width: 10px;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    color: #e0f0e0;
-    top: 0;
-    background: -moz-linear-gradient(top,#e0f0e0 0%,#e0f0e0 60%,rgba(255,255,255,0) 100%);
-    background: -webkit-linear-gradient(top,#e0f0e0 0%,#e0f0e0 60%,rgba(255,255,255,0) 100%);
-    /* background: linear-gradient(to bottom,#e0f0e0 0%,#e0f0e0 60%,rgba(255,255,255,0) 100%); */
+  content: "";
+  display: block;
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  color: #e0f0e0;
+  top: 0;
+  background: -moz-linear-gradient(
+    top,
+    #e0f0e0 0%,
+    #e0f0e0 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background: -webkit-linear-gradient(
+    top,
+    #e0f0e0 0%,
+    #e0f0e0 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  /* background: linear-gradient(to bottom,#e0f0e0 0%,#e0f0e0 60%,rgba(255,255,255,0) 100%); */
 }
 
 blockquote > cite,
 blockquote > p > cite {
-    display: block;
-    font-size: 1.1em;
-    line-height: 1.3em;
-    font-weight: 700;
-    font-style: normal;
-    margin-top: 1.1em;
-    letter-spacing: 0;
-    font-style:italic;
+  display: block;
+  font-size: 1.1em;
+  line-height: 1.3em;
+  font-weight: 700;
+  font-style: normal;
+  margin-top: 1.1em;
+  letter-spacing: 0;
+  font-style: italic;
 }
