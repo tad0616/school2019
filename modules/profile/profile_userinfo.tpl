@@ -1,1 +1,1 @@
-<{includeq file="$xoops_rootpath/modules/tadtools/themes4_tpl/blocks_tpl/profile/profile_userinfo.tpl"}>
+<{include file="$xoops_rootpath/modules/tadtools/themes4_tpl/blocks_tpl/profile/profile_userinfo.tpl"}>
