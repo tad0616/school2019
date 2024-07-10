@@ -3,21 +3,21 @@
     <head>
         <!--目前$_SESSION['bootstrap']="<{$smarty.session.bootstrap}>"; -->
         <!--將目前的資料夾名稱，設定為樣板標籤變數 theme_name-->
-        <{assign var=theme_name value=$xoTheme->folderName}>
+        <{assign var="theme_name" value=$xoTheme->folderName}>
 
         <!--載入由使用者設定的各項佈景變數-->
-        <{include file="$xoops_rootpath/modules/tadtools/themes_common/get_var.tpl"}>
+        <{* <{include file="$xoops_rootpath/modules/tadtools/themes_common/get_var.tpl"}> *}>
 
         <{if $container_width == 12}>
-            <{assign var=container_width value="100%"}>
+            <{assign var="container_width" value="100%"}>
         <{elseif $container_width == 11}>
-            <{assign var=container_width value="92%"}>
+            <{assign var="container_width" value="92%"}>
         <{elseif $container_width == 10}>
-            <{assign var=container_width value="83%"}>
+            <{assign var="container_width" value="83%"}>
         <{elseif $container_width == 9}>
-            <{assign var=container_width value="75%"}>
+            <{assign var="container_width" value="75%"}>
         <{elseif $container_width == 8}>
-            <{assign var=container_width value="67%"}>
+            <{assign var="container_width" value="67%"}>
         <{/if}>
 
         <{include file="$xoops_rootpath/modules/tadtools/themes_common/meta.tpl"}>
@@ -190,9 +190,9 @@
             <{/if}>
 
             /* nav_display_type=<{$nav_display_type}>, navbar_pos=<{$navbar_pos}> */
-            <{assign var=nav_margin_y value=$nav_margin|substr:0:1}>
+            <{assign var="nav_margin_y" value="$nav_margin|substr:0:1"}>
             <{if $nav_margin_y==0 or $nav_margin_y==''}>
-                <{assign var=nav_border_radius value="0"}>
+                <{assign var="nav_border_radius" value="0"}>
             <{/if}>
             <{if $nav_border_radius and $nav_display_type=='not_full' and $navbar_pos!='fixed-top' and $navbar_pos!='fixed-bottom'}>
                 #main-nav {
@@ -288,12 +288,12 @@
     </head>
 
     <body>
-        <{if $margin_top}><div style="margin-top: <{$margin_top}>px;"></div><{/if}>
+        <{if $margin_top}><div style="margin-top: <{$margin_top}>;"></div><{/if}>
         <!-- logo區域 -->
         <{if $logo_img and $logo_position=="page"}>
             <div id="logo-container">
                 <div class="container">
-                    <{assign var=mylogofile value=$xoops_rootpath$logo_path`$smarty.get.$logo_var`.$logo_ext}>
+                    <{assign var="mylogofile" value="$xoops_rootpath$logo_path`$smarty.get.$logo_var`.$logo_ext"}>
                     <div id="logo-container-display" class="row <{if $logo_align}>d-flex <{$logo_align}><{/if}> <{if $logo_shadow=='1' and $logo_display_type=='not_full'}>xoops_content_shadow<{/if}>">
                         <{if $logo_auto==1 and $smarty.server.REQUEST_URI|strpos:$smarty.get.$logo_var!==false and $mylogofile|file_exists}>
                             <a href="<{$xoops_url}>/index.php?<{$logo_var}>=<{$smarty.get.$logo_var}>"><img id="website_logo" src="<{$xoops_url}><{$logo_path}><{$smarty.get.$logo_var}>.<{$logo_ext}>" style="max-width: 100%;<{if $logo_position=="slide"}>position: absolute; z-index: 5; <{$logo_place}><{else}>position: relative; z-index:10;<{/if}>" alt="<{$xoops_sitename}>" title="<{$xoops_sitename}>" class="img-fluid"></a>
@@ -350,7 +350,7 @@
         <div class="container" id="footer-container">
             <div id="xoops_theme_footer" class="row <{if $footer_shadow=='1' and $footer_display_type=='not_full'}>xoops_content_shadow<{/if}>">
                 <div id="footer-container-display" class="col-sm-12">
-                    <{if $xoops_isadmin}><a href="<{$xoops_url}>/modules/system/admin.php?fct=preferences&op=show&confcat_id=3" class="block_config"></a><{/if}>
+                    <{if $xoops_isadmin|default:false}><a href="<{$xoops_url}>/modules/system/admin.php?fct=preferences&op=show&confcat_id=3" class="block_config"></a><{/if}>
 
                     <{include file="$xoops_rootpath/modules/tadtools/themes4_tpl/footerBlock.tpl"}>
 

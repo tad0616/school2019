@@ -175,13 +175,13 @@ $config_enable['block_style'] = ['enable' => '1', 'min' => '', 'max' => '', 'req
 border: none;
 border-radius: 6px;
 padding: 0px;
-margin:15px 0px;', ];
+margin:15px 0px;'];
 
 //區塊標題區樣式手動設定[theme_css_blocks.tpl]，值： 1 （重複）, 0 （不重複）
 $config_enable['block_title_style'] = ['enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => 'padding:6px;
 text-align:center;
 font-family: 微軟正黑體;
-text-shadow: 0px 1px #0c4d5b, 1px 0px #0c4d5b, -1px 0px #0c4d5b, 0px -1px #0c4d5b, -1px -1px #0c4d5b, 1px 1px #0c4d5b, 1px -1px #0c4d5b, -1px 1px #0c4d5b;', ];
+text-shadow: 0px 1px #0c4d5b, 1px 0px #0c4d5b, -1px 0px #0c4d5b, 0px -1px #0c4d5b, -1px -1px #0c4d5b, 1px 1px #0c4d5b, 1px -1px #0c4d5b, -1px 1px #0c4d5b;'];
 
 //區塊內容區樣式手動設定[theme_css_blocks.tpl]，值： 1 （重複）, 0 （不重複）
 $config_enable['block_content_style'] = ['enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => 'padding: 5px 0px 10px;'];
@@ -206,15 +206,15 @@ $config_enable['bt_bg_color']['rightBlock'] = ['enable'=>1, 'min' => '', 'max' =
 $config_enable['block_style']['footerCenterBlock'] = ['enable' => 1, 'min' => '', 'max' => '', 'require' => 0, 'default' => 'border: none;
 border-radius: 6px;
 padding: 0px;
-margin:0px 0px 20px;', ];
+margin:0px 0px 20px;'];
 $config_enable['block_style']['footerLeftBlock'] = ['enable' => 1, 'min' => '', 'max' => '', 'require' => 0, 'default' => 'border: none;
 border-radius: 6px;
 padding: 0px;
-margin:0px 0px 20px;', ];
+margin:0px 0px 20px;'];
 $config_enable['block_style']['footerRightBlock'] = ['enable' => 1, 'min' => '', 'max' => '', 'require' => 0, 'default' => 'border: none;
 border-radius: 6px;
 padding: 0px;
-margin:0px 0px 20px;', ];
+margin:0px 0px 20px;'];
 $config_enable['bt_bg_color']['leftBlock'] = ['enable' => 1, 'min' => '', 'max' => '', 'require' => 0, 'default' => '#ff7163'];
 $config_enable['bt_bg_color']['rightBlock'] = ['enable' => 1, 'min' => '', 'max' => '', 'require' => 0, 'default' => '#ff7163'];
 

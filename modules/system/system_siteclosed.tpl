@@ -3,21 +3,21 @@
     <head>
         <!--目前$_SESSION['bootstrap']="<{$smarty.session.bootstrap}>"; -->
         <!--將目前的資料夾名稱，設定為樣板標籤變數 theme_name-->
-        <{assign var=theme_name value=$xoTheme->folderName}>
+        <{assign var="theme_name" value=$xoTheme->folderName}>
 
         <!--載入由使用者設定的各項佈景變數-->
-        <{include file="$xoops_rootpath/modules/tadtools/themes_common/get_var.tpl"}>
+        <{* <{include file="$xoops_rootpath/modules/tadtools/themes_common/get_var.tpl"}> *}>
 
         <{if $container_width == 12}>
-            <{assign var=container_width value="100%"}>
+            <{assign var="container_width" value="100%"}>
         <{elseif $container_width == 11}>
-            <{assign var=container_width value="92%"}>
+            <{assign var="container_width" value="92%"}>
         <{elseif $container_width == 10}>
-            <{assign var=container_width value="83%"}>
+            <{assign var="container_width" value="83%"}>
         <{elseif $container_width == 9}>
-            <{assign var=container_width value="75%"}>
+            <{assign var="container_width" value="75%"}>
         <{elseif $container_width == 8}>
-            <{assign var=container_width value="67%"}>
+            <{assign var="container_width" value="67%"}>
         <{/if}>
 
         <{include file="$xoops_rootpath/modules/tadtools/themes_common/meta.tpl"}>
@@ -112,7 +112,7 @@
         <div class="container" id="footer-container" style="max-width: <{if $footer_display_type!='all_full'}><{$container_width}><{else}>100%<{/if}>;">
             <div id="xoops_theme_footer" class="row <{if $footer_shadow=='1' and $footer_display_type=='not_full'}>xoops_content_shadow<{/if}>">
                 <div id="footer-container-display" class="col-sm-12">
-                    <{if $xoops_isadmin}><a href="<{$xoops_url}>/modules/system/admin.php?fct=preferences&op=show&confcat_id=3" class="block_config"></a><{/if}>
+                    <{if $xoops_isadmin|default:false}><a href="<{$xoops_url}>/modules/system/admin.php?fct=preferences&op=show&confcat_id=3" class="block_config"></a><{/if}>
 
                     <{include file="$xoops_rootpath/modules/tadtools/themes4_tpl/footerBlock.tpl"}>
 

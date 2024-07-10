@@ -7,7 +7,7 @@ define('TF_FOOTER_STYLE', '頁尾內容樣式設定');
 define('TF_FOOTER_STYLE_DESC', '可使用CSS語法控制頁尾內容的外觀');
 define('TF_FONT_FAMILY', '主要字型設定');
 define('TF_FONT_FAMILY_DESC', '輸入字型名稱，有空白的部份需要用""包起來。完整可用字型請參考：<a href="' . XOOPS_URL . '/modules/tadtools/fonts.php" target="_blank">' . XOOPS_URL . '/modules/tadtools/fonts.php</a>');
-define('TF_FONT_FAMILY_DESC', '輸入字型名稱，有空白的部份需要用""包起來。如：' . TF_FONT_FAMILY_DEFAULT);
+define("TF_FONT_FAMILY_DEFAULT", "\"Helvetica Neue\",Helvetica,Arial,\"微軟正黑體\",sans-serif");
 define('TF_USE_SHADOW_LOGO', '陰影是否包含logo');
 define('TF_USE_SHADOW_LOGO_DESC', '當logo在滑動圖文之上時，是否仍要加上陰影？');
 define('TF_FOOTER_BG_CSS', '頁尾底圖CSS設定');

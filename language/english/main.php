@@ -8,7 +8,7 @@ define('TF_FOOTER_STYLE', 'End of page content style setting');
 define('TF_FOOTER_STYLE_DESC', 'Use CSS syntax to control the appearance of the content at the end of the page');
 define('TF_FONT_FAMILY', 'Main font settings');
 define('TF_FONT_FAMILY_DESC', 'Enter the font name, and wrap the blank part with "". For a complete list of available fonts, please refer to <a href="' . XOOPS_URL . '/modules/tadtools/fonts.php" target="_blank">' . XOOPS_URL . '/modules/tadtools/fonts.php</a>');
-define('TF_FONT_FAMILY_DESC', 'Enter the font name, the blank part needs to be wrapped with "". For example: ' . TF_FONT_FAMILY_DEFAULT);
+define('TF_FONT_FAMILY_DEFAULT', '"Helvetica Neue", Helvetica, Arial, sans-serif');
 define('TF_USE_SHADOW_LOGO', 'Does the shadow contain logo');
 define('TF_USE_SHADOW_LOGO_DESC', 'When the logo is over the sliding image, do you still want to add a shadow?');
 define('TF_FOOTER_BG_CSS', 'End of page CSS setting');
