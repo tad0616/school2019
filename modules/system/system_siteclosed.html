@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<{$xoops_langcode}>">
+<html lang="<{$xoops_langcode|default:''}>">
     <head>
         <!--目前$_SESSION['bootstrap']="<{$smarty.session.bootstrap}>"; -->
         <!--將目前的資料夾名稱，設定為樣板標籤變數 theme_name-->
@@ -22,12 +22,12 @@
 
         <{include file="$xoops_rootpath/modules/tadtools/themes_common/meta.tpl"}>
         <!-- 網站的標題及標語 -->
-        <title><{$xoops_sitename}><{if $xoops_pagetitle}> - <{$xoops_pagetitle}><{/if}></title>
+        <title><{$xoops_sitename|default:''}><{if $xoops_pagetitle|default:false}> - <{$xoops_pagetitle|default:''}><{/if}></title>
 
         <{include file="$xoops_rootpath/modules/tadtools/themes4_tpl/link_css.tpl"}>
 
         <!-- 給模組套用的樣板標籤開始 -->
-<{$xoops_module_header}>
+<{$xoops_module_header|default:''}>
         <!-- 給模組套用的樣板標籤結束 -->
 
         <!-- 局部套用的樣式，如果有載入完整樣式 theme_css.tpl 那就不需要這一部份 -->
@@ -36,13 +36,13 @@
         <style type="text/css">
             #xoops_theme_left_zone{
             <{if $left_separate=='1'}>
-                border-right:<{$separate_style}>;
+                border-right:<{$separate_style|default:''}>;
             <{/if}>
             }
 
             #xoops_theme_right_zone{
             <{if $right_separate=='1'}>
-                border-<{if $theme_type=="theme_type_3" or $theme_type=="theme_type_4" or $theme_type=="theme_type_8"}>top<{else}>left<{/if}>:<{$separate_style}>;
+                border-<{if $theme_type=="theme_type_3" or $theme_type=="theme_type_4" or $theme_type=="theme_type_8"}>top<{else}>left<{/if}>:<{$separate_style|default:''}>;
             <{/if}>
             }
 
@@ -50,7 +50,7 @@
             #xoops_theme_footer a:hover,
             #xoops_theme_footer a:active ,
             #xoops_theme_footer a:visited {
-                color:<{$footer_color}>;
+                color:<{$footer_color|default:''}>;
             }
         </style>
     </head>
@@ -59,7 +59,7 @@
         <!-- logo區域 -->
         <{if $logo_img and $logo_position=="page"}>
             <div id="logo-container">
-                <div class="container" id="logo-container" style="max-width: <{if $logo_display_type!='all_full'}><{$container_width}><{else}>100%<{/if}>;">
+                <div class="container" id="logo-container" style="max-width: <{if $logo_display_type!='all_full'}><{$container_width|default:''}><{else}>100%<{/if}>;">
                     <div id="logo-container-display" class="row <{if $logo_shadow=='1' and $logo_display_type=='not_full'}>xoops_content_shadow<{/if}>">
                         <{include file="$xoops_rootpath/modules/tadtools/themes4_tpl/logo.tpl"}>
                     </div>
@@ -74,12 +74,12 @@
 
         <!-- 滑動圖區域 -->
         <{if $use_slide }>
-            <div class="container" id="slide-container" style="max-width: <{if $slide_display_type!='all_full'}><{$container_width}><{else}>100%<{/if}>;">
+            <div class="container" id="slide-container" style="max-width: <{if $slide_display_type!='all_full'}><{$container_width|default:''}><{else}>100%<{/if}>;">
                 <div id="xoops_theme_slide" class="row  <{if $slide_shadow=='1' and $slide_display_type=='not_full'}>xoops_content_shadow<{/if}>">
                     <div id="slide-container-display" style="width:100%; position:relative; z-index:1;">
                         <{include file="$xoops_rootpath/modules/tadtools/themes4_tpl/slideshow_responsive.tpl"}>
-                        <{if $slide_mask}>
-                            <img src="<{$slide_mask}>" alt="mask" class="img-fluid" style="width:100%; position:absolute; z-index:2; left:0px; top:0px;">
+                        <{if $slide_mask|default:false}>
+                            <img src="<{$slide_mask|default:''}>" alt="mask" class="img-fluid" style="width:100%; position:absolute; z-index:2; left:0px; top:0px;">
                         <{/if}>
                     </div>
                 </div>
@@ -94,9 +94,9 @@
 
 
         <!-- 主內容區域 -->
-        <div class="container" id="content-container" style="max-width: <{if $content_display_type!='all_full'}><{$container_width}><{else}>100%<{/if}>;">
+        <div class="container" id="content-container" style="max-width: <{if $content_display_type!='all_full'}><{$container_width|default:''}><{else}>100%<{/if}>;">
             <div id="xoops_theme_content" class="row <{if $content_shadow=='1' and $content_display_type=='not_full'}>xoops_content_shadow<{/if}>">
-                <div id="content-container-display" style="<{$content_zone}>" class="col-sm-12">
+                <div id="content-container-display" style="<{$content_zone|default:''}>" class="col-sm-12">
                     <!-- 載入布局 -->
                     <{include file="$xoops_rootpath/modules/tadtools/themes4_tpl/siteclosed_login.tpl"}>
 
@@ -107,16 +107,16 @@
         </div>
 
         <!-- 頁尾區域 -->
-        <{if $xoops_footer}>
+        <{if $xoops_footer|default:false}>
 
-        <div class="container" id="footer-container" style="max-width: <{if $footer_display_type!='all_full'}><{$container_width}><{else}>100%<{/if}>;">
+        <div class="container" id="footer-container" style="max-width: <{if $footer_display_type!='all_full'}><{$container_width|default:''}><{else}>100%<{/if}>;">
             <div id="xoops_theme_footer" class="row <{if $footer_shadow=='1' and $footer_display_type=='not_full'}>xoops_content_shadow<{/if}>">
                 <div id="footer-container-display" class="col-sm-12">
                     <{if $xoops_isadmin|default:false}><a href="<{$xoops_url}>/modules/system/admin.php?fct=preferences&op=show&confcat_id=3" class="block_config"></a><{/if}>
 
                     <{include file="$xoops_rootpath/modules/tadtools/themes4_tpl/footerBlock.tpl"}>
 
-                    <{$xoops_footer}>
+                    <{$xoops_footer|default:''}>
                 </div>
             </div>
         </div>
@@ -127,6 +127,6 @@
 
         <!-- 載入自訂js -->
         <{include file="$xoops_rootpath/modules/tadtools/themes4_tpl/my_js.tpl"}>
-        <{$my_code}>
+        <{$my_code|default:''}>
     </body>
 </html>
