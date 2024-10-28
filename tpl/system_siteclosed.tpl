@@ -55,7 +55,7 @@
         </style>
     </head>
 
-    <body>
+    <body  <{$prism_setup}>>
         <!-- logo區域 -->
         <{if $logo_img and $logo_position=="page"}>
             <div id="logo-container">

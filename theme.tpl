@@ -287,7 +287,7 @@
         <{include file="$xoops_rootpath/modules/tadtools/themes4_tpl/bootstrap_js.tpl"}>
     </head>
 
-    <body>
+    <body  <{$prism_setup}>>
         <{if $margin_top|default:false}><div style="margin-top: <{$margin_top|default:''}>;"></div><{/if}>
         <!-- logo區域 -->
         <{if $logo_img and $logo_position=="page"}>
