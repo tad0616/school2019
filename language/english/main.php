@@ -164,13 +164,6 @@ define('TF_SLIDE_MT', 'Top distance');
 define('TF_SLIDE_MT_DESC', 'How many pixels (px) above the slide image');
 define('TF_SLIDE_MB', 'Below distance');
 define('TF_SLIDE_MB_DESC', 'How many pixels (px) from below');
-define('TF_SLIDE_MASK', 'Customize the frame of the slider');
-define('TF_SLIDE_MASK_DESC', 'Use mask to add frame for slide image');
 
-define('TF_SLIDE_DEF_MASK', 'Solid color background slider frame');
-define('TF_SLIDE_DEF_MASK_DESC', 'Automatically generate the slider frame according to the background color (custom slider frame should be "None")');
-define('TF_SLIDE_DEF_MASK0', 'None');
-define('TF_SLIDE_DEF_MASK1', 'Outer frame 1');
-define('TF_SLIDE_DEF_MASK2', 'Outer frame 2');
 define('TF_NAV_NO_MOUSE_OVER', 'Click to show submenu or not');
 define('TF_NAV_NO_MOUSE_OVER_DESC', 'Default is to appear when mouse hover, if yes, you must click to appear');

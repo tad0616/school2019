@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="<{$xoops_langcode|default:''}>">
     <head>
-        <!--目前$_SESSION['bootstrap']="<{$smarty.session.bootstrap}>"; -->
+        <{assign var="bootstrap" value=$smarty.session.bootstrap|default:$session.bootstrap}>
+        <!--目前$_SESSION['bootstrap']="<{$bootstrap|default:''}>"; -->
         <!--將目前的資料夾名稱，設定為樣板標籤變數 theme_name-->
         <{assign var="theme_name" value=$xoTheme->folderName}>
 
-        <!--載入由使用者設定的各項佈景變數-->
-        <{* <{include file="$xoops_rootpath/modules/tadtools/themes_common/get_var.tpl"}> *}>
+
+
 
         <{if $container_width == 12}>
             <{assign var="container_width" value="100%"}>
@@ -287,7 +288,7 @@
         <{include file="$xoops_rootpath/modules/tadtools/themes4_tpl/bootstrap_js.tpl"}>
     </head>
 
-    <body  <{$prism_setup}>>
+    <body <{$prism_setup|default:''}> <{if $navbar_pos=='fixed-top'}>style="padding-top: 50px;"<{/if}>>
         <{if $margin_top|default:false}><div style="margin-top: <{$margin_top|default:''}>;"></div><{/if}>
         <!-- logo區域 -->
         <{if $logo_img and $logo_position=="page"}>
@@ -317,11 +318,6 @@
                     <div id="xoops_theme_slide" class="row  <{if $slide_shadow=='1' and $slide_display_type=='not_full'}>xoops_content_shadow<{/if}>">
                         <div id="slide-container-display" style="width:100%; position:relative; z-index:1;">
                             <{include file="$xoops_rootpath/themes/school2019/tpl/slideshow_responsive.tpl"}>
-                            <{if $slide_mask|default:false}>
-                                <img src="<{$slide_mask|default:''}>" alt="mask" class="img-fluid" style="width:100%; position:absolute; z-index:2; left:0px; top:0px;">
-                            <{elseif $slide_def_mask}>
-                                <img src="<{$xoops_url}>/uploads/tad_themes/school2019/mask/<{$slide_def_mask|default:''}>.svg" alt="mask" class="img-fluid" style="width:100%; position:absolute; z-index:2; left:0px; top:0px;">
-                            <{/if}>
                         </div>
                     </div>
                 </div>
